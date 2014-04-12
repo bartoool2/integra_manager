@@ -1,0 +1,237 @@
+2014/03/05 15:54:01 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.NavBar" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\integra_manager\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#1 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'application.ext...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\xampp\htdocs\integra_manager\protected\views\layouts\main.php(36): CBaseController->widget('application.ext...')
+#4 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\integra_manager\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\integra_manager\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\integra_manager\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\integra_manager\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(32): CController->render('index')
+#16 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/integra_manager/
+---
+2014/03/05 15:54:18 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.NavBar" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\integra_manager\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#1 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'application.ext...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\xampp\htdocs\integra_manager\protected\views\layouts\main.php(36): CBaseController->widget('application.ext...')
+#4 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\integra_manager\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\integra_manager\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\integra_manager\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\integra_manager\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(32): CController->render('index')
+#16 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/integra_manager/
+---
+2014/03/05 15:54:30 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.NavBar" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\integra_manager\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#1 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'application.ext...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\xampp\htdocs\integra_manager\protected\views\layouts\main.php(36): CBaseController->widget('application.ext...', Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\integra_manager\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\integra_manager\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\integra_manager\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\integra_manager\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(32): CController->render('index')
+#16 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/integra_manager/
+---
+2014/03/05 17:19:09 [error] [php] Undefined index: name (C:\xampp\htdocs\integra_manager\protected\extensions\widgets\NavBar.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 C:\xampp\htdocs\integra_manager\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#3 C:\xampp\htdocs\integra_manager\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#4 C:\xampp\htdocs\integra_manager\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(206): CContentDecorator->run()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(300): SiteController->endWidget()
+#7 C:\xampp\htdocs\integra_manager\protected\views\layouts\column1.php(6): SiteController->endContent()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require()
+#9 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#10 C:\xampp\htdocs\integra_manager\framework\web\CController.php(784): SiteController->renderFile()
+#11 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(32): SiteController->render()
+#12 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/
+in C:\xampp\htdocs\integra_manager\protected\extensions\widgets\NavBar.php (42)
+in C:\xampp\htdocs\integra_manager\protected\views\layouts\main.php (54)
+in C:\xampp\htdocs\integra_manager\protected\views\layouts\column1.php (6)
+2014/04/02 17:44:34 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.curl" is not defined.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(105): CComponent->__get('curl')
+#1 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(41): CModule->__get('curl')
+#2 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionTestRequest()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('testRequest')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testReques...')
+#8 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/testRequest
+HTTP_REFERER=http://localhost/integra_manager/
+---
+2014/04/02 17:48:02 [error] [exception.CException] exception 'CException' with message 'Curl and its behaviors do not have a method or closure named "post".' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(41): CComponent->__call('post', Array)
+#1 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(41): Curl->post('http://localhos...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionTestRequest()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('testRequest')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testReques...')
+#8 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/testRequest
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/testRequest
+---
+2014/04/02 17:55:31 [error] [exception.CException] exception 'CException' with message 'Empty reply from server' in C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php:36
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php(54): Curl->exec('http://localhos...')
+#1 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(41): Curl->post('http://localhos...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionTestRequest()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('testRequest')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testReques...')
+#8 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/testRequest
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/testRequest
+---
+2014/04/02 18:01:52 [error] [exception.CException] exception 'CException' with message 'Empty reply from server' in C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php:36
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php(54): Curl->exec('http://localhos...')
+#1 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(41): Curl->post('http://localhos...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionTestRequest()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('testRequest')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testReques...')
+#8 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/testRequest
+---
+2014/04/02 18:04:52 [error] [exception.CException] exception 'CException' with message 'Empty reply from server' in C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php:36
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php(54): Curl->exec('http://localhos...')
+#1 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(41): Curl->post('http://localhos...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionTestRequest()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('testRequest')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testReques...')
+#8 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/testRequest
+---
+2014/04/02 18:05:17 [error] [exception.CException] exception 'CException' with message 'Empty reply from server' in C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php:36
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php(54): Curl->exec('http://localhos...')
+#1 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(41): Curl->post('http://localhos...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionTestRequest()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('testRequest')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testReques...')
+#8 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/testRequest
+---
+2014/04/02 18:07:54 [error] [exception.CException] exception 'CException' with message 'Empty reply from server' in C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php:36
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php(54): Curl->exec('http://localhos...')
+#1 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(41): Curl->post('http://localhos...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionTestRequest()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('testRequest')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testReques...')
+#8 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/testRequest
+---
+2014/04/02 23:52:28 [error] [exception.CException] exception 'CException' with message 'Failed connect to localhost:8000; No error' in C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php:36
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\protected\extensions\curl\Curl.php(54): Curl->exec('http://localhos...')
+#1 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(41): Curl->post('http://localhos...', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionTestRequest()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('testRequest')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testReques...')
+#8 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/testRequest
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/testRequest
+---
