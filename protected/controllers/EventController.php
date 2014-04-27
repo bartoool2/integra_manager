@@ -22,7 +22,7 @@ class EventController extends Controller
 	{
 		return array(
 			array('allow',
-				'actions'=>array('list'),
+				'actions'=>array('list', 'refresh'),
 				'users'=>array('@'),
 			),
 			array('deny',
@@ -33,6 +33,11 @@ class EventController extends Controller
 	
 	public function actionList()
 	{
-		
+                $this->render('list');
 	}
+        
+        public function actionRefresh()
+        {
+                $this->render('list');
+        }
 }

@@ -36,44 +36,27 @@
 			</div>
 		</div>
 		<div class="layout-row">
-		<?php 
-			
-			
+		<?php 						
 			$this->widget('application.extensions.widgets.NavBar', array(
 				'items'=>$this->mainmenu
-//				array(
-//					array(
-//						'type'=>'item',
-//						'name'=>'Menu position',
-//						'url'=>Yii::app()->controller->createUrl('site/testRequest')
-//					),
-//					array(
-//						'type'=>'dropdown',
-//						'name'=>'Test dropdown',
-//						'items'=>array(
-//							array(
-//								'type'=>'item',
-//								'name'=>'DD position 1',
-//								'url'=>'url/url'
-//							),
-//							array(
-//								'type'=>'divider',
-//							),
-//							array(
-//								'type'=>'item',
-//								'name'=>'DD position 2',
-//								'url'=>'url/url'
-//							),
-//						)
-//					)
-//				)
 			)); 
 		?>
-
-		<?php echo $content; ?>
-
+                </div>
+                <?php 	
+                if(!Yii::app()->user->getIsGuest())
+                {
+			$this->widget('application.extensions.widgets.StatusBar', array(
+				'items'=>array(
+                                        Status::SYSTEM_STATUS,
+                                        Status::SYSTEM_STATUS,
+                                )
+			));
+                }
+		?>
+                <div class="layout-row page-content">
+                        <?php echo $content; ?>
+                </div>
 		<div class="clear"></div>
-		</div>
 	</div>
 </body>
 </html>

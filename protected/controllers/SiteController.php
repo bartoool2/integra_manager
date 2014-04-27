@@ -39,8 +39,16 @@ class SiteController extends Controller
 	
 	public function actionDesktop()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
+                if(isset($_POST['Disarm']['submit']))
+                {
+                        echo 'System disarmed';
+                }
+                
+                if(isset($_POST['Arm']['submit']))
+                {
+                        echo 'System armed';
+                }
+                
 		$this->render('desktop');
 	}
 	

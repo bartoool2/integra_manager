@@ -30,11 +30,11 @@ class Controller extends CController
 		if (Yii::app()->user->isUser)
 		{
 			$this->topmenu = array(	
-				array(
-					'name'=>Yii::t('view', 'Pomoc'),
-					'url'=>$this->createUrl('site/help'),
-					'type'=>'item'
-				),
+//				array(
+//					'name'=>Yii::t('view', 'Pomoc'),
+//					'url'=>$this->createUrl('site/help'),
+//					'type'=>'item'
+//				),
 				array(
 					'name'=>Yii::t('view', 'Wyloguj'),
 					'url'=>$this->createUrl('site/logout'),

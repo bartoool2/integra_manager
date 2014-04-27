@@ -10,10 +10,61 @@
         padding-top: 10px;
 }
 
+#status-bar
+{
+        margin-top: -25px;
+}
+
+.status-cell
+{
+        padding-top: 5px;
+        text-align: center;
+}
+
+.status-image
+{
+        margin-left: 5px;
+        width: 1.2em;
+        height: 1.2em;
+}
+
 .layout-row
 {
-        max-width: 100%;  
+        width: 100%;  
         clear: both;
+}
+
+.code-panel
+{
+        width: 48%;
+}
+
+.action-title-bar
+{
+        width: 100%;
+        margin-bottom: 10px;
+}
+
+.action-title
+{
+        width: 55%;
+}
+
+.button-bar
+{
+        text-align: right;
+        width: 40%;
+        float: right;
+}
+
+.button-bar-item
+{
+        margin-left: 15px;
+}
+
+.page-content
+{
+        padding: 0 5px 0 5px;
 }
 
 .right
@@ -29,7 +80,7 @@
 #logo
 {
         font-size: 100%;
-        padding-left: 15px;
+        padding-left: 5px;
         text-decoration: none;
         font-weight: bold;
 }
@@ -43,11 +94,33 @@
 {
         display: block !important;
 }
+
+.desktop-only-inline
+{
+        display: inline !important;
+}
+
 .single-btn
 {
         width: 30%;
 }
 
+.action-btn
+{
+        width: 30%;
+}
+
+.panel-button
+{
+        width: 30% !important;
+        float: right;
+}
+
+.panel-input
+{
+        width: 65% !important;
+        float: left;
+}
 
 @media screen and (max-width: 768px) 
 {
@@ -56,13 +129,41 @@
                 display: block !important;
         }
 
-        .desktop-only
+        .desktop-only 
         {
                 display: none !important;
+        }
+        
+        .desktop-only-inline
+        {
+               display: none !important; 
         }
         
         .single-btn
         {
                 width: 50%;
+        }
+        
+        .code-panel
+        {
+                width: 100%;
+                clear: both !important;
+        }
+        
+        .panel-button
+        {
+                width: 40% !important;
+                float: right;
+        }
+
+        .panel-input
+        {
+                width: 58% !important;
+                float: left;
+        }
+        
+        .action-btn
+        {
+                width: auto;
         }
 }
