@@ -1,22 +1,27 @@
 <?php
 
 class SiteController extends Controller
-{
-	/**
-	 * Declares class-based actions.
-	 */
-	public function actions()
+{	
+	public function filters()
 	{
 		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
+			'accessControl',
+		);
+	}
+	
+	public function accessRules()
+	{
+		return array(
+			array('allow',
+				'actions'=>array('desktop'),
+				'users'=>array('@'),
 			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
+			array('allow',
+				'actions'=>array('index', 'login', 'logout', 'error'),
+				'users'=>array('*'),
+			),
+			array('deny',
+				'users'=>array('*'),
 			),
 		);
 	}
@@ -30,6 +35,13 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
+	}
+	
+	public function actionDesktop()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$this->render('desktop');
 	}
 	
 	public function actionTestRequest()
@@ -103,7 +115,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+				$this->redirect($this->createUrl('site/desktop'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -115,6 +127,6 @@ class SiteController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		$this->redirect($this->createUrl('site/index'));
 	}
 }

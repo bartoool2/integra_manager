@@ -21,56 +21,59 @@
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
-<body>
-
-	<div id="root">			
+<body>		
+	<div id="root">	
+		<div class="layout-row desktop-only">
+			<div class="left">
+				<h1><small><a href="<?php echo Yii::app()->controller->createUrl('site/index'); ?>" id="logo">Integra manager</a></small></h1>
+			</div>
+			<div id="top-menu" class="right">
+				<?php 
+					$this->widget('application.extensions.widgets.TopMenu', array(
+						'items'=>$this->topmenu
+					));
+				?>
+			</div>
+		</div>
+		<div class="layout-row">
 		<?php 
+			
+			
 			$this->widget('application.extensions.widgets.NavBar', array(
-				'items'=>array(
-					array(
-						'type'=>'item',
-						'name'=>'Menu position',
-						'url'=>Yii::app()->controller->createUrl('site/testRequest')
-					),
-					array(
-						'type'=>'dropdown',
-						'name'=>'Test dropdown',
-						'items'=>array(
-							array(
-								'type'=>'item',
-								'name'=>'DD position 1',
-								'url'=>'url/url'
-							),
-							array(
-								'type'=>'divider',
-							),
-							array(
-								'type'=>'item',
-								'name'=>'DD position 2',
-								'url'=>'url/url'
-							),
-						)
-					)
-				)
+				'items'=>$this->mainmenu
+//				array(
+//					array(
+//						'type'=>'item',
+//						'name'=>'Menu position',
+//						'url'=>Yii::app()->controller->createUrl('site/testRequest')
+//					),
+//					array(
+//						'type'=>'dropdown',
+//						'name'=>'Test dropdown',
+//						'items'=>array(
+//							array(
+//								'type'=>'item',
+//								'name'=>'DD position 1',
+//								'url'=>'url/url'
+//							),
+//							array(
+//								'type'=>'divider',
+//							),
+//							array(
+//								'type'=>'item',
+//								'name'=>'DD position 2',
+//								'url'=>'url/url'
+//							),
+//						)
+//					)
+//				)
 			)); 
 		?>
-
-		<?php if(isset($this->breadcrumbs)):?>
-			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-				'links'=>$this->breadcrumbs,
-			)); ?><!-- breadcrumbs -->
-		<?php endif?>
 
 		<?php echo $content; ?>
 
 		<div class="clear"></div>
-
-		<div id="footer">
-			Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-			All Rights Reserved.<br/>
-			<?php echo Yii::powered(); ?>
-		</div><!-- footer -->
-
+		</div>
 	</div>
 </body>
 </html>

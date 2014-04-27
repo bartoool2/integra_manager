@@ -1,6 +1,68 @@
 #root
 {        
         margin: 0 auto;
+        padding: 0;
         max-width: 1000px;
 }
 
+#top-menu
+{
+        padding-top: 10px;
+}
+
+.layout-row
+{
+        max-width: 100%;  
+        clear: both;
+}
+
+.right
+{
+        float: right;
+}
+
+.left
+{
+        float: left;        
+}
+
+#logo
+{
+        font-size: 100%;
+        padding-left: 15px;
+        text-decoration: none;
+        font-weight: bold;
+}
+
+.mobile-only
+{
+        display: none !important;
+}
+
+.desktop-only
+{
+        display: block !important;
+}
+.single-btn
+{
+        width: 30%;
+}
+
+
+@media screen and (max-width: 768px) 
+{
+        .mobile-only
+        {
+                display: block !important;
+        }
+
+        .desktop-only
+        {
+                display: none !important;
+        }
+        
+        .single-btn
+        {
+                width: 50%;
+        }
+}
