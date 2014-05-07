@@ -56,14 +56,20 @@ return array(
 		),
 		// uncomment the following to use a MySQL database
 		
+//		'db'=>array(
+//			'connectionString' => 'mysql:host=localhost;dbname=integra_manager',
+//			'emulatePrepare' => true,
+//			'username' => 'root',
+//			'password' => '',
+//			'charset' => 'utf8',
+//		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=integra_manager',
+			'connectionString' => 'mysql:host=s6.jupe.pl;dbname=bstokro_intrs',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'bstokro',
+			'password' => 'KyuG73QK',
 			'charset' => 'utf8',
 		),
-		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

@@ -1454,3 +1454,281 @@ Stack trace:
 REQUEST_URI=/integra_manager/index.php?r=site/desktop
 HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/login
 ---
+2014/05/07 12:38:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'bstokro_bstokro'@'83.29.9.107' (using password: YES)' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\integra_manager\protected\models\User.php(113): CActiveRecord->find(Object(CDbCriteria))
+#8 C:\xampp\htdocs\integra_manager\protected\components\UserIdentity.php(21): User->getUserByLogin('bstokrocki')
+#9 C:\xampp\htdocs\integra_manager\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\integra_manager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\integra_manager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(125): CModel->validate()
+#14 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('login')
+#24 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#25 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/login
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/login
+---
+2014/05/07 12:38:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'bstokro_bstokro'@'83.29.9.107' (using password: YES)' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\integra_manager\protected\models\User.php(113): CActiveRecord->find(Object(CDbCriteria))
+#8 C:\xampp\htdocs\integra_manager\protected\components\UserIdentity.php(21): User->getUserByLogin('bstokrocki')
+#9 C:\xampp\htdocs\integra_manager\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\integra_manager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\integra_manager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(125): CModel->validate()
+#14 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('login')
+#24 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#25 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/login
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/login
+---
+2014/05/07 12:39:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'bstokro_bstokro'@'83.29.9.107' (using password: YES)' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\integra_manager\protected\models\User.php(113): CActiveRecord->find(Object(CDbCriteria))
+#8 C:\xampp\htdocs\integra_manager\protected\components\UserIdentity.php(21): User->getUserByLogin('bstokrocki')
+#9 C:\xampp\htdocs\integra_manager\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\integra_manager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\integra_manager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(125): CModel->validate()
+#14 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('login')
+#24 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#25 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/login
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/login
+---
+2014/05/07 12:42:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'bstokro_bstokro'@'83.29.9.107' (using password: YES)' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\integra_manager\protected\models\User.php(113): CActiveRecord->find(Object(CDbCriteria))
+#8 C:\xampp\htdocs\integra_manager\protected\components\UserIdentity.php(21): User->getUserByLogin('bstokrocki')
+#9 C:\xampp\htdocs\integra_manager\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\integra_manager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\integra_manager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(125): CModel->validate()
+#14 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('login')
+#24 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#25 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/login
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/login
+---
+2014/05/07 12:44:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'bstokro_bstokro'@'83.29.9.107' (using password: YES)' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\integra_manager\protected\models\User.php(113): CActiveRecord->find(Object(CDbCriteria))
+#8 C:\xampp\htdocs\integra_manager\protected\components\UserIdentity.php(21): User->getUserByLogin('bstokrocki')
+#9 C:\xampp\htdocs\integra_manager\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\integra_manager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\integra_manager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(125): CModel->validate()
+#14 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('login')
+#24 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#25 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/login
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/login
+---
+2014/05/07 12:46:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\integra_manager\protected\models\User.php(113): CActiveRecord->find(Object(CDbCriteria))
+#8 C:\xampp\htdocs\integra_manager\protected\components\UserIdentity.php(21): User->getUserByLogin('bstokrocki')
+#9 C:\xampp\htdocs\integra_manager\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\integra_manager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\integra_manager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(125): CModel->validate()
+#14 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('login')
+#24 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#25 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/login
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/login
+---
+2014/05/07 12:46:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'bstokro_bstokro'@'83.29.9.107' (using password: YES)' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\integra_manager\protected\models\User.php(113): CActiveRecord->find(Object(CDbCriteria))
+#8 C:\xampp\htdocs\integra_manager\protected\components\UserIdentity.php(21): User->getUserByLogin('bstokrocki')
+#9 C:\xampp\htdocs\integra_manager\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\integra_manager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\integra_manager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(125): CModel->validate()
+#14 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('login')
+#24 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#25 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/login
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/login
+---
+2014/05/07 22:21:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'bstokro'@'83.10.161.215' (using password: YES)' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(46): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(18): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/desktop')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/desktop
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=event/list
+---
+2014/05/07 22:30:33 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.buttonLabel" is not defined.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\protected\views\site\desktop.php(16): CComponent->__get('buttonLabel')
+#1 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('desktop', NULL, true)
+#5 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(52): CController->render('desktop')
+#6 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionDesktop()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('desktop')
+#16 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/desktop')
+#17 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/desktop
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=event/list
+---
