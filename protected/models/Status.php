@@ -14,6 +14,19 @@
 class Status extends CActiveRecord
 {
 	const SYSTEM_STATUS = 1;
+	const ZONE_1_STATUS = 2;
+	const ZONE_2_STATUS = 3;
+	const ZONE_3_STATUS = 4;
+	const ZONE_4_STATUS = 5;
+	
+	const STATUS_DISARMED = 0;
+	const STATUS_ARMED = 1;	
+	const STATUS_TIME_TO_ENTER = 2;
+	const STATUS_TIME_TO_LEAVE = 3;
+	const STATUS_ALARM = 4;
+	const STATUS_FIRE = 5;
+	const STATUS_ALARM_REGISTERED = 6;
+	const STATUS_FIRE_REGISTERED = 7;
         
 	public function tableName()
 	{
@@ -107,6 +120,26 @@ class Status extends CActiveRecord
 
 		return self::model()->find($criteria);
         }
+	
+	public function getStatusClass()
+	{
+		switch($this->_status->value)
+		{
+			case self::STATUS_ARMED:
+				return 'success';
+			case self::STATUS_TIME_TO_ENTER:
+			case self::STATUS_TIME_TO_LEAVE:
+				return 'warning';
+			case self::STATUS_ALARM:
+			case self::STATUS_FIRE:
+				return 'danger';
+			case self::STATUS_ALARM_REGISTERED:
+			case self::STATUS_FIRE_REGISTERED:
+				return 'info';
+			default:
+				return '';
+		}
+	}
         
         public function getGraphic()
         {

@@ -39,17 +39,39 @@ class SiteController extends Controller
 	
 	public function actionDesktop()
 	{
-                if(isset($_POST['Disarm']['submit']))
-                {
-                        echo 'System disarmed';
-                }
+		$request = new Request('Control');
+		
+                if(isset($_POST['Request']))
+		{				
+			$request->attributes = $_POST['Request'];			
+			
+			if(isset($_POST['Request']['action_disarm']))
+			{
+				$request->saveNewRequest(Request::CODE_DISARM);
+				
+			}
+			else if(isset($_POST['Request']['action_arm']))
+			{
+				$request->saveNewRequest(Request::CODE_ARM);
+			}
+			else if(isset($_POST['Request']['action_clear_alarm']))
+			{
+				$request->saveNewRequest(Request::CODE_CLEAR_ALARM);
+			}
+			
+			if($request->save())
+			{
+				$this->setAlert('Potwierdzenie', 'Żądanie zostało wysłane do centrali');
+			}
+			else
+			{
+				$this->setAlert('Błąd', 'Wysłanie żądania do centrali nie powiodło się', self::ALERT_RED);
+			}
+		}			
                 
-                if(isset($_POST['Arm']['submit']))
-                {
-                        echo 'System armed';
-                }
-                
-		$this->render('desktop');
+		$this->render('desktop', array(
+			'model'=>$request
+		));
 	}
 	
 	public function actionTestRequest()

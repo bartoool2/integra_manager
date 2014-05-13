@@ -5,10 +5,11 @@
  */
 class Controller extends CController
 {
-	/**
-	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
-	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
-	 */
+	const ALERT_RED = 'alert-danger';
+	const ALERT_YELLOW = 'alert-warning';
+	const ALERT_BLUE = 'alert-info';
+	const ALERT_GREEN = 'alert-success';
+	
 	public $layout='//layouts/column1';
 	/**
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
@@ -16,6 +17,10 @@ class Controller extends CController
 	public $topmenu = array();
 	
 	public $mainmenu = array();
+	
+	public $alert_strong;
+	public $alert;
+	public $alert_type;
 	/**
 	 * @var array the breadcrumbs of the current page. The value of this property will
 	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}
@@ -51,6 +56,11 @@ class Controller extends CController
 				array(
 					'name'=>Yii::t('view', 'Zdarzenia'),
 					'url'=>$this->createUrl('event/list'),
+					'type'=>'item'
+				),
+				array(
+					'name'=>Yii::t('view', 'Strefy'),
+					'url'=>$this->createUrl('zone/state'),
 					'type'=>'item'
 				),
 				array(
@@ -95,5 +105,24 @@ class Controller extends CController
 		}
 		
 		parent::init();
+	}
+	
+	public function displayAlert()
+	{
+		if($this->alert != NULL)
+		{
+			?>
+				<div class="alert <?php echo $this->alert_type; ?> alert-dismissable">
+					<strong><?php echo $this->alert_strong; ?></strong> <?php echo $this->alert; ?>
+				</div>
+			<?php
+		}
+	}
+	
+	public function setAlert($strong, $text, $type = self::ALERT_GREEN)
+	{
+		$this->alert = $text;
+		$this->alert_strong = $strong;
+		$this->alert_type = $type;
 	}
 }

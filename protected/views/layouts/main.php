@@ -48,13 +48,19 @@
 			$this->widget('application.extensions.widgets.StatusBar', array(
 				'items'=>array(
                                         Status::SYSTEM_STATUS,
-                                        Status::SYSTEM_STATUS,
+                                        Status::ZONE_1_STATUS,
+					Status::ZONE_2_STATUS,
+					Status::ZONE_3_STATUS,
+					Status::ZONE_4_STATUS,
                                 )
 			));
                 }
 		?>
                 <div class="layout-row page-content">
-                        <?php echo $content; ?>
+                        <?php 
+				$this->displayAlert();
+				echo $content; 
+			?>
                 </div>
 		<div class="clear"></div>
 	</div>

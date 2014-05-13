@@ -6,7 +6,9 @@ $this->widget('application.extensions.widgets.ActionTitleBar', array(
 
 <div class="layout-row">
      
-<form method="post">
+<?php $form = $this->beginWidget('CActiveForm', array(
+    'id'=>'control-form',    
+)); ?>
 	<ul class="nav nav-tabs">
 		<li class="active" style="width: 33%; text-align: center"><a href="#disarm" data-toggle="tab">Rozbrajanie</a></li>
 		<li style="width: 33%; text-align: center"><a href="#arm" data-toggle="tab">Uzbrajanie</a></li>
@@ -31,28 +33,32 @@ $this->widget('application.extensions.widgets.ActionTitleBar', array(
 							<div style="display: table-cell; width: 25%">
 								<div class="checkbox">
 									<label>
-										Strefa 1 <input type="checkbox" checked="checked" class="zone_disarm_checkbox" style="margin-left: 15%">
+										<?php echo $form->checkbox($model, 'alias_disarm_zone1', array('class'=>"zone_disarm_checkbox", 'style'=>'margin-left: 15%')); ?>
+										Strefa 1
 									</label>
 								</div>
 							</div>
 							<div style="display: table-cell; width: 25%">
 								<div class="checkbox">
 									<label>
-										Strefa 2 <input type="checkbox" checked="checked" class="zone_disarm_checkbox" style="margin-left: 15%">
+										<?php echo $form->checkbox($model, 'alias_disarm_zone2', array('class'=>"zone_disarm_checkbox", 'style'=>'margin-left: 15%')); ?>
+										Strefa 2
 									</label>
 								</div>
 							</div>
 							<div style="display: table-cell; width: 25%">
 								<div class="checkbox">
 									<label>
-										Strefa 3 <input type="checkbox" checked="checked" class="zone_disarm_checkbox" style="margin-left: 15%">
+										<?php echo $form->checkbox($model, 'alias_disarm_zone3', array('class'=>"zone_disarm_checkbox", 'style'=>'margin-left: 15%')); ?>
+										Strefa 3
 									</label>
 								</div>
 							</div>
 							<div style="display: table-cell; width: 25%">
 								<div class="checkbox">
 									<label>
-										Strefa 4 <input type="checkbox" checked="checked" class="zone_disarm_checkbox" style="margin-left: 15%">
+										<?php echo $form->checkbox($model, 'alias_disarm_zone4', array('class'=>"zone_disarm_checkbox", 'style'=>'margin-left: 15%')); ?>
+										Strefa 4
 									</label>
 								</div>
 							</div>
@@ -60,9 +66,9 @@ $this->widget('application.extensions.widgets.ActionTitleBar', array(
 					</div>
 					<div class="input-group" style="margin-top: 20px">
 						<span class="input-group-addon">Wprowadź kod</span>
-						<input type="text" class="form-control">
+						<input name="Request[disarm_code]" id="Request_disarm_code" type="password" class="form-control">
 						<span class="input-group-btn">
-							<button class="btn btn-primary" type="button">Rozbrój alarm</button>
+							<button name="Request[action_disarm]" id="Request_action_disarm" class="btn btn-primary" type="submit">Rozbrój alarm</button>
 						</span>
 					</div>
 				</div>
@@ -85,28 +91,32 @@ $this->widget('application.extensions.widgets.ActionTitleBar', array(
 							<div style="display: table-cell; width: 25%">
 								<div class="checkbox">
 									<label>
-										Strefa 1 <input type="checkbox" checked="checked" class="zone_arm_checkbox" style="margin-left: 15%">
+										<?php echo $form->checkbox($model, 'alias_arm_zone1', array('class'=>"zone_arm_checkbox", 'style'=>'margin-left: 15%')); ?>
+										Strefa 1 
 									</label>
 								</div>
 							</div>
 							<div style="display: table-cell; width: 25%">
 								<div class="checkbox">
 									<label>
-										Strefa 2 <input type="checkbox" checked="checked" class="zone_arm_checkbox" style="margin-left: 15%">
+										<?php echo $form->checkbox($model, 'alias_arm_zone2', array('class'=>"zone_arm_checkbox", 'style'=>'margin-left: 15%')); ?>
+										Strefa 2
 									</label>
 								</div>
 							</div>
 							<div style="display: table-cell; width: 25%">
 								<div class="checkbox">
 									<label>
-										Strefa 3 <input type="checkbox" checked="checked" class="zone_arm_checkbox" style="margin-left: 15%">
+										<?php echo $form->checkbox($model, 'alias_arm_zone3', array('class'=>"zone_arm_checkbox", 'style'=>'margin-left: 15%')); ?>
+										Strefa 3
 									</label>
 								</div>
 							</div>
 							<div style="display: table-cell; width: 25%">
 								<div class="checkbox">
 									<label>
-										Strefa 4 <input type="checkbox" checked="checked" class="zone_arm_checkbox" style="margin-left: 15%">
+										<?php echo $form->checkbox($model, 'alias_arm_zone4', array('class'=>"zone_arm_checkbox", 'style'=>'margin-left: 15%')); ?>
+										Strefa 4
 									</label>
 								</div>
 							</div>
@@ -114,9 +124,9 @@ $this->widget('application.extensions.widgets.ActionTitleBar', array(
 					</div>
 					<div class="input-group" style="margin-top: 20px">
 						<span class="input-group-addon">Wprowadź kod</span>
-						<input type="text" class="form-control">
+						<input name="Request[arm_code]" id="Request_arm_code" type="password" class="form-control">
 						<span class="input-group-btn">
-							<button class="btn btn-primary" type="button">Uzbrój alarm</button>
+							<button name="Request[action_arm]" id="Request_action_arm" class="btn btn-primary" type="submit">Uzbrój alarm</button>
 						</span>
 					</div>
 				</div>
@@ -127,16 +137,16 @@ $this->widget('application.extensions.widgets.ActionTitleBar', array(
 				<div class="panel-body">
 					<div class="input-group">
 						<span class="input-group-addon">Wprowadź kod</span>
-						<input type="text" class="form-control">
+						<input name="Request[clear_alarm_code]" id="Request_clear_alarm_code" type="password" class="form-control">
 						<span class="input-group-btn">
-							<button class="btn btn-primary" type="button">Kasuj alarm</button>
+							<button name="Request[action_clear_alarm]" id="Request_action_clear_alarm" class="btn btn-primary" type="submit">Kasuj alarm</button>
 						</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</form>
+<?php $this->endWidget(); ?>
 </div>
 
 <?php
