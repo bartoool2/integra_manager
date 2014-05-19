@@ -16,9 +16,19 @@
  */
 class Event extends CActiveRecord
 {
-	/**
-	 * @return string the associated database table name
-	 */
+	const CLASS_ZAT_ALARMS = 0;
+	const CLASS_PAE_ALARMS = 1;
+	const CLASS_ARM_DISARM_CLEAR = 2;
+	const CLASS_BYPASSES = 3;
+	const CLASS_ACCESS_CONTROL = 4;
+	const CLASS_TROUBLES = 5;
+	const CLASS_USER_FUNCTIONS = 6;
+	const CLASS_SYSTEM_EVENTS = 7;
+	
+	public $alias_date_from = '';
+	public $alias_date_to = '';
+		
+	
 	public function tableName()
 	{
 		return 'im_events';
@@ -32,12 +42,13 @@ class Event extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('index_1, index_2, index_3, call_index_1, call_index_2, call_index_3, time', 'required'),
-			array('index_1, index_2, index_3, call_index_1, call_index_2, call_index_3', 'numerical', 'integerOnly'=>true),
+			array('index_1, index_2, index_3, call_index_1, call_index_2, call_index_3, date, time', 'required'),
+			array('index_1, index_2, index_3, call_index_1, call_index_2, call_index_3, class', 'numerical', 'integerOnly'=>true),
 			array('description', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, index_1, index_2, index_3, call_index_1, call_index_2, call_index_3, time, description', 'safe', 'on'=>'search'),
+			array('id, index_1, index_2, index_3, call_index_1, call_index_2, call_index_3,
+				 alias_date_from, alias_date_to, date, time, description, class', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,6 +78,9 @@ class Event extends CActiveRecord
 			'call_index_3' => 'Call Index 3',
 			'time' => 'Czas',
 			'description' => 'Opis',
+			'class'=>'Klasa zdarzenia',
+			'alias_date_from'=>'Data od',
+			'alias_date_to'=>'Data do'
 		);
 	}
 
@@ -95,9 +109,21 @@ class Event extends CActiveRecord
 		$criteria->compare('call_index_1',$this->call_index_1);
 		$criteria->compare('call_index_2',$this->call_index_2);
 		$criteria->compare('call_index_3',$this->call_index_3);
-		$criteria->compare('time',$this->time,true);
+//		$criteria->compare('time',$this->time,true);
 		$criteria->compare('description',$this->description,true);
-
+		$criteria->compare('class',$this->class,true);
+		
+		if($this->alias_date_from != '')
+		{
+			$criteria->addCondition('date >= "'.$this->alias_date_from.'" ');
+		}
+		
+		if($this->alias_date_to != '')
+		{
+			$criteria->addCondition('date <= "'.$this->alias_date_to.'" ');
+		}
+		
+//		print_r($criteria);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -112,5 +138,52 @@ class Event extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	public static function getEventClasses()
+	{
+		return array(
+			'blank'=>'',
+			self::CLASS_ZAT_ALARMS=>'Alarmy z wejść i sabotażowe',
+			self::CLASS_PAE_ALARMS=>'Alarmy ze stref i sabotażowe',
+			self::CLASS_ARM_DISARM_CLEAR=>'Rozbrojenia i uzbrojenia',
+			self::CLASS_BYPASSES=>'Blokady wejść',
+			self::CLASS_ACCESS_CONTROL=>'Kontrola dostępu',
+			self::CLASS_TROUBLES=>'Diagnostyka',
+			self::CLASS_USER_FUNCTIONS=>'Użyte funkcje',
+			self::CLASS_SYSTEM_EVENTS=>'Zdarzenia systemowe',
+		);
+	}
+	
+	public function getClassCssClass()
+	{
+		$classes = array(
+			self::CLASS_ZAT_ALARMS=>'danger',
+			self::CLASS_PAE_ALARMS=>'danger',
+			self::CLASS_ARM_DISARM_CLEAR=>'success',
+			self::CLASS_BYPASSES=>'warning',
+			self::CLASS_ACCESS_CONTROL=>'success',
+			self::CLASS_TROUBLES=>'warning',
+			self::CLASS_USER_FUNCTIONS=>'info',
+			self::CLASS_SYSTEM_EVENTS=>'info',
+		);
+		
+		return $classes[$this->class];
+	}
+	
+	public function getClassName()
+	{
+		$names = array(
+			self::CLASS_ZAT_ALARMS=>'Alarmy z wejść i sabotażowe',
+			self::CLASS_PAE_ALARMS=>'Alarmy ze stref i sabotażowe',
+			self::CLASS_ARM_DISARM_CLEAR=>'Rozbrojenia i uzbrojenia',
+			self::CLASS_BYPASSES=>'Blokady wejść',
+			self::CLASS_ACCESS_CONTROL=>'Kontrola dostępu',
+			self::CLASS_TROUBLES=>'Diagnostyka',
+			self::CLASS_USER_FUNCTIONS=>'Użyte funkcje',
+			self::CLASS_SYSTEM_EVENTS=>'Zdarzenia systemowe',
+		);
+		
+		return $names[$this->class];
 	}
 }

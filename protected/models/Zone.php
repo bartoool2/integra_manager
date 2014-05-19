@@ -11,7 +11,7 @@
  * The followings are the available model relations:
  * @property ImSystemStatusValues $status0
  */
-class Status extends CActiveRecord
+class Zone extends CActiveRecord
 {
 	const SYSTEM_STATUS = 1;
 	const ZONE_1_STATUS = 2;
@@ -30,7 +30,7 @@ class Status extends CActiveRecord
         
 	public function tableName()
 	{
-		return 'im_system_statuses';
+		return 'im_zones';
 	}
 
 	/**
@@ -140,12 +140,31 @@ class Status extends CActiveRecord
 				return '';
 		}
 	}
-        
-        public function getGraphic()
-        {
-                $result = Yii::app()->baseUrl.'/images/statuses/';
-                $result .= $this->_status->value ? 'armed.png' : 'disarmed.png';
-                
-                return $result;
-        }
+	
+	public static function getZonesToArm()
+	{
+		$criteria=new CDbCriteria;
+
+		$criteria->condition = "status<>".StatusValue::getStatusId(self::STATUS_ARMED);
+
+		return self::model()->findAll($criteria);
+	}
+	
+	public static function getZonesToDisarm()
+	{
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('status', StatusValue::getStatusId(self::STATUS_ARMED));
+
+		return self::model()->findAll($criteria);
+	}
+	
+	public static function getZonesToClear()
+	{
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('status', StatusValue::getStatusId(self::STATUS_ALARM_REGISTERED));
+
+		return self::model()->findAll($criteria);
+	}
 }

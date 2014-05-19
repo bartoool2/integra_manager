@@ -13,12 +13,32 @@
 #status-bar
 {
         margin-top: -25px;
+        overflow: hidden;
 }
 
 .status-cell
 {
         padding-top: 5px;
         text-align: center;
+        width: 25%;
+        float: left;
+}
+
+.disarm_all_checkbox
+{
+        width: 25%;
+}
+
+.clear_all_checkbox
+{
+        width: 30%;
+}
+
+.disarm_all_button
+{
+        width: 100%;
+        text-align: center;
+        padding-left: 20%;
 }
 
 .status-image
@@ -32,6 +52,24 @@
 {
         width: 100%;  
         clear: both;
+}
+
+.dual-column
+{
+        float: left;
+        width: 50%;
+}
+
+.dual-row
+{
+        padding-top: 10px;
+        clear: both;
+}
+
+.zone-checkbox
+{
+        width: 25%;
+        float: left;
 }
 
 .code-panel
@@ -101,9 +139,14 @@
         display: block !important;
 }
 
-.desktop-only-inline
+.desktop-only-table-cell
 {
-        display: inline !important;
+        display: table-cell !important;
+}
+
+.mobile-only-table-cell
+{
+        display: none !important;
 }
 
 .single-btn
@@ -140,11 +183,35 @@
                 display: none !important;
         }
         
-        .desktop-only-inline
+        .desktop-only-table-cell
         {
-               display: none !important; 
+                 display: none !important;
+        }
+
+        .mobile-only-table-cell
+        {
+                display: table-cell !important;
         }
         
+        .zone-checkbox
+        {
+                width: 100%;
+                padding-left: 10%;
+        }
+        
+        .dual-column
+        {
+                clear: both;
+                width: 100%;
+                padding-top: 10px;
+        }
+        
+        .dual-row
+        {
+                padding-top: 0;
+                clear: both;
+        }
+
         .single-btn
         {
                 width: 50%;

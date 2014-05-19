@@ -1,22 +1,43 @@
 <?php
 
-// uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
+Yii::setPathOfAlias('matwork', dirname(__FILE__).'/../../matwork');
 
-// This is the main Web application configuration. Any writable
-// CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Integra Manager',
-
+	'theme'=>'default',
 	// preloading 'log' component
 	'preload'=>array('log'),
+	'language' => 'pl',
 
 	// autoloading model and component classes
 	'import'=>array(
+//		'matwork.components.*',
+//		'matwork.behaviors.*',
+//		'matwork.filters.*',
+//		'matwork.forms.*',
+//		'matwork.helpers.*',
+//		'matwork.helpers.PHPExcel.*',
+//		'matwork.helpers.PHPExcel.Shared.*',
+//		'matwork.helpers.PHPExcel.Reader.*',
+//		'matwork.helpers.PHPExcel.Reader.Excel2007.*',
+//		'matwork.helpers.PHPExcel.Writer.*',
+//		'matwork.helpers.PHPExcel.Writer.Excel2007.*',
+//		'matwork.helpers.PHPExcel.Calculation.*',
+//		'matwork.helpers.PHPExcel.CachedObjectStorage.*',
+//		'matwork.helpers.PHPExcel.CalcEngine.*',
+//		'matwork.helpers.PHPExcel.Cell.*',
+//		'matwork.helpers.PHPExcel.RichText.*',
+//		'matwork.helpers.PHPExcel.Style.*',
+//		'matwork.helpers.PHPExcel.Worksheet.*',
+//		'matwork.helpers.ZipStream.*',
+//		'matwork.validators.*',
+		'application.forms.*',
+		'application.templates.*',
 		'application.models.*',
 		'application.components.*',
-		'application.extensions.*',
+		'application.formats.*',
+		'application.helpers.*',
 	),
 
 	'modules'=>array(
@@ -69,6 +90,9 @@ return array(
 			'username' => 'bstokro',
 			'password' => 'KyuG73QK',
 			'charset' => 'utf8',
+		),
+		'message'=>array(
+			'class'=>'matwork.plugins.message.ZMessage',
 		),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

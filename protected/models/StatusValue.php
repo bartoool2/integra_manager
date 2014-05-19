@@ -46,7 +46,7 @@ class StatusValue extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'imSystemStatuses' => array(self::HAS_MANY, 'Status', 'status'),
+			'imSystemStatuses' => array(self::HAS_MANY, 'Zone', 'status'),
 		);
 	}
 
@@ -98,5 +98,15 @@ class StatusValue extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	public static function getStatusId($status)
+	{
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('value', $status);
+
+		$status = self::model()->find($criteria);
+		return $status->id;
 	}
 }

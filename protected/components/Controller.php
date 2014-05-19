@@ -21,6 +21,8 @@ class Controller extends CController
 	public $alert_strong;
 	public $alert;
 	public $alert_type;
+	public $navigation;
+	public $title;
 	/**
 	 * @var array the breadcrumbs of the current page. The value of this property will
 	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}

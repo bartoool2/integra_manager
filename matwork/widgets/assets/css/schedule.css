@@ -1,0 +1,46 @@
+.schedule-day
+{
+	width: 100%;
+	height: 100%;
+}
+
+.schedule-day .schedule-day-hour
+{
+	border-top: 1px solid #cccccc;
+}
+
+.schedule-day .schedule-day-half
+{
+	border-top: 1px solid #cccccc;
+}
+
+.schedule-day .schedule-day-quarter
+{
+	border-top: 1px dotted #cccccc;
+}
+
+.schedule-day .schedule-day-label,
+.schedule-day .schedule-day-item
+{
+	padding: 5px;
+}
+
+.schedule-day .schedule-day-label
+{
+	font-weight: bold;
+}
+
+.schedule-day .schedule-day-item
+{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.schedule-day .schedule-busy
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	background-color: #dddddd;
+}

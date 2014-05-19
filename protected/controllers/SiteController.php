@@ -13,7 +13,7 @@ class SiteController extends Controller
 	{
 		return array(
 			array('allow',
-				'actions'=>array('desktop'),
+				'actions'=>array('desktop', 'reloadStatuses'),
 				'users'=>array('@'),
 			),
 			array('allow',
@@ -39,34 +39,61 @@ class SiteController extends Controller
 	
 	public function actionDesktop()
 	{
-		$request = new Request('Control');
+		$request = new Request();				
 		
                 if(isset($_POST['Request']))
-		{				
-			$request->attributes = $_POST['Request'];			
-			
+		{										
 			if(isset($_POST['Request']['action_disarm']))
 			{
-				$request->saveNewRequest(Request::CODE_DISARM);
+				$request = new Request('ControlDisarm');
+				$request->attributes = $_POST['Request'];
 				
+				if(!isset($_POST['Request']['disarm_code']) || $_POST['Request']['disarm_code'] != Yii::app()->user->data->code)
+				{
+					$request->addError('disarm_code', 'Wprowadzony kod jest niepoprawny.');
+				}
+				else 
+				{
+					$request->saveNewRequest(Request::CODE_DISARM);
+				}
 			}
 			else if(isset($_POST['Request']['action_arm']))
 			{
-				$request->saveNewRequest(Request::CODE_ARM);
+				$request = new Request('ControlArm');
+				$request->attributes = $_POST['Request'];
+				
+				if(!isset($_POST['Request']['arm_code']) || $_POST['Request']['arm_code'] != Yii::app()->user->data->code)
+				{
+					$request->addError('arm_code', 'Wprowadzony kod jest niepoprawny.');
+				}
+				else 
+				{
+					$request->saveNewRequest(Request::CODE_ARM);
+				}
 			}
 			else if(isset($_POST['Request']['action_clear_alarm']))
 			{
-				$request->saveNewRequest(Request::CODE_CLEAR_ALARM);
+				$request = new Request('ControlClear');
+				$request->attributes = $_POST['Request'];
+				
+				if(!isset($_POST['Request']['clear_alarm_code']) || $_POST['Request']['clear_alarm_code'] != Yii::app()->user->data->code)
+				{
+					$request->addError('clear_alarm_code', 'Wprowadzony kod jest niepoprawny.');
+				}
+				else 
+				{
+					$request->saveNewRequest(Request::CODE_CLEAR_ALARM);
+				}				
 			}
-			
+						
 			if($request->save())
 			{
 				$this->setAlert('Potwierdzenie', 'Żądanie zostało wysłane do centrali');
 			}
-			else
-			{
-				$this->setAlert('Błąd', 'Wysłanie żądania do centrali nie powiodło się', self::ALERT_RED);
-			}
+//			else
+//			{
+//				$this->setAlert('Błąd', 'Wysłanie żądania do centrali nie powiodło się', self::ALERT_RED);
+//			}
 		}			
                 
 		$this->render('desktop', array(
@@ -158,5 +185,13 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect($this->createUrl('site/index'));
+	}
+	
+	public function actionReloadStatuses()
+	{
+		if(!Yii::app()->user->getIsGuest())
+                {
+			$this->widget('application.extensions.widgets.StatusBar');
+                }
 	}
 }

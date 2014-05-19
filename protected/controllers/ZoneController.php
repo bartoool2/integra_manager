@@ -22,7 +22,7 @@ class ZoneController extends Controller
 	{
 		return array(
 			array('allow',
-				'actions'=>array('state'),
+				'actions'=>array('state', 'ajaxStateReload'),
 				'users'=>array('@'),
 			),
 			array('deny',
@@ -38,10 +38,28 @@ class ZoneController extends Controller
 	
 	public function actionState()
 	{
-		$statuses = Status::model()->findAll();
+		$dataProvider=new CActiveDataProvider('Zone', array(
+				'criteria'=>array(
+					'condition'=>'id<>1',
+			))
+		);
 		
 		$this->render('state', array(
-			'model'=>$statuses
+			'dataProvider'=>$dataProvider,
+		));
+	}
+	
+	public function actionAjaxStateReload()
+	{
+		$dataProvider=new CActiveDataProvider('Zone', array(
+				'criteria'=>array(
+					'condition'=>'id<>1',
+			))
+		);
+		
+		$this->renderPartial('_ajaxState', array(
+			'dataProvider' => $dataProvider,
+			'grid_id' => 'zones-state-grid',
 		));
 	}
         

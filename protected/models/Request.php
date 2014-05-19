@@ -29,11 +29,28 @@ class Request extends CActiveRecord
 	public $alias_disarm_zone2 = 1;
 	public $alias_disarm_zone3 = 1;
 	public $alias_disarm_zone4 = 1;
+	public $alias_disarm_zone5 = 1;
+	public $alias_disarm_zone6 = 1;
+	public $alias_disarm_zone7 = 1;
+	public $alias_disarm_zone8 = 1;
 	
 	public $alias_arm_zone1 = 1;
 	public $alias_arm_zone2 = 1;
 	public $alias_arm_zone3 = 1;
 	public $alias_arm_zone4 = 1;
+	public $alias_arm_zone5 = 1;
+	public $alias_arm_zone6 = 1;
+	public $alias_arm_zone7 = 1;
+	public $alias_arm_zone8 = 1;
+	
+	public $alias_clear_zone1 = 1;
+	public $alias_clear_zone2 = 1;
+	public $alias_clear_zone3 = 1;
+	public $alias_clear_zone4 = 1;
+	public $alias_clear_zone5 = 1;
+	public $alias_clear_zone6 = 1;
+	public $alias_clear_zone7 = 1;
+	public $alias_clear_zone8 = 1;
 	
 	public $action_disarm = self::CODE_DISARM;
 	public $action_arm = self::CODE_ARM;
@@ -59,12 +76,21 @@ class Request extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('request_code, additional_data, time', 'required'),
 			array('status, priority', 'numerical', 'integerOnly'=>true),
-			array('disarm_code, arm_code, clear_alarm_code', 'numerical', 'integerOnly'=>true, 'on'=>'Control'),
+			array('disarm_code, arm_code, clear_alarm_code', 'numerical', 'integerOnly'=>true, 'on'=>'ControlDisarm'),
+			array('disarm_code, arm_code, clear_alarm_code', 'numerical', 'integerOnly'=>true, 'on'=>'ControlArm'),
+			array('disarm_code, arm_code, clear_alarm_code', 'numerical', 'integerOnly'=>true, 'on'=>'ControlClear'),
+			array('disarm_code, arm_code, clear_alarm_code', 'length', 'max'=>4, 'on'=>'ControlDisarm'),
+			array('disarm_code, arm_code, clear_alarm_code', 'length', 'max'=>4, 'on'=>'ControlArm'),
+			array('disarm_code, arm_code, clear_alarm_code', 'length', 'max'=>4, 'on'=>'ControlClear'),
+			array('disarm_code', 'validateCode', 'code'=>self::CODE_DISARM, 'on'=>'ControlDisarm'),
+			array('disarm_code', 'validateCode', 'code'=>self::CODE_ARM, 'on'=>'ControlArm'),
+			array('disarm_code', 'validateCode', 'code'=>self::CODE_CLEAR_ALARM, 'on'=>'ControlClear'),
+			array('disarm_code', 'required', 'on'=>'ControlDisarm'),
+			array('arm_code', 'required', 'on'=>'ControlArm'),
+			array('clear_alarm_code', 'required', 'on'=>'ControlClear'),		
 			array('request_code', 'length', 'max'=>45),
-			array('pass_code', 'length', 'max'=>4),
-			array('disarm_code, arm_code, clear_alarm_code', 'length', 'max'=>4, 'on'=>'Control'),
+			array('pass_code', 'length', 'max'=>4),			
 			array('additional_data', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -76,6 +102,30 @@ class Request extends CActiveRecord
 		);
 	}
 
+	public function validateCode($attribute, $params)
+	{	    
+		if($params['code'] == self::CODE_DISARM)
+		{
+			if($this->disarm_code != Yii::app()->user->data->code)
+			{
+				$this->addError('pass_code', 'Podany kod jest niepoprawny');
+			}
+		}
+		else if($params['code'] == self::CODE_ARM)
+		{
+			if($this->arm_code != Yii::app()->user->data->code)
+			{
+				$this->addError('pass_code', 'Podany kod jest niepoprawny');
+			}
+		}
+		else if($params['code'] == self::CODE_CLEAR_ALARM)
+		{
+			if($this->clear_alarm_code != Yii::app()->user->data->code)
+			{
+				$this->addError('pass_code', 'Podany kod jest niepoprawny');
+			}
+		}
+	}
 	/**
 	 * @return array relational rules.
 	 */
@@ -100,6 +150,9 @@ class Request extends CActiveRecord
 			'status' => 'Status',
 			'time' => 'Time',
 			'priority' => 'Priority',
+			'disarm_code'=>'Kod',
+			'arm_code'=>'Kod',
+			'clear_alarm_code'=>'Kod'
 		);
 	}
 	
@@ -151,6 +204,22 @@ class Request extends CActiveRecord
 		else if($this->request_code == Request::CODE_CLEAR_ALARM)
 		{
 			$this->pass_code = $this->clear_alarm_code;
+			if($this->alias_clear_zone1)
+			{
+				array_push($additionalData, 1);
+			}
+			if($this->alias_clear_zone2)
+			{
+				array_push($additionalData, 2);
+			}
+			if($this->alias_clear_zone3)
+			{
+				array_push($additionalData, 3);
+			}
+			if($this->alias_clear_zone4)
+			{
+				array_push($additionalData, 4);
+			}
 		}
 		
 		$this->additional_data = json_encode($additionalData);
@@ -199,5 +268,5 @@ class Request extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
+	}		
 }

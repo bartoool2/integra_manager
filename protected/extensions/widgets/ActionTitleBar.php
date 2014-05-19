@@ -12,7 +12,7 @@ class ActionTitleBar extends CWidget
                         <?php 
                                 foreach($this->items as $item)
                                 {
-                                        echo '<a href="'.$item['url'].'"><button class="'.$item['class'].' button-bar-item">'.$item['label'].'</button></a>';
+                                        echo '<a href="'.$item['url'].'"><button onclick="'.(isset($item['onclick']) ? $item['onclick'] : '').'" class="'.$item['class'].' button-bar-item">'.$item['label'].'</button></a>';
                                 }
                         ?>
                         </div>

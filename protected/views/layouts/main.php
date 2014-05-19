@@ -8,8 +8,10 @@
 	$cs->registerCssFile($baseUrl.'/themes/layout/main/style.css');
 	$cs->registerCssFile($baseUrl.'/themes/layout/main/bootstrap/css/bootstrap-theme.min.css');
 	$cs->registerCssFile($baseUrl.'/themes/layout/main/bootstrap/css/bootstrap.min.css');
+	$cs->registerCssFile($baseUrl.'/themes/layout/main/bootstrap/css/datepicker.css');
 	$cs->registerScriptFile($baseUrl.'/themes/layout/main/jquery.min.js');
 	$cs->registerScriptFile($baseUrl.'/themes/layout/main/bootstrap/js/bootstrap.js');
+	$cs->registerScriptFile($baseUrl.'/themes/layout/main/bootstrap/js/bootstrap-datepicker.js');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -19,6 +21,19 @@
 	<meta name="language" content="en" />       
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<script>
+		$(document).ready(function() 
+		{
+			setInterval(function(){
+				$.ajax({
+					url: "<?php echo Yii::app()->controller->createUrl('site/reloadStatuses'); ?>",					
+				})
+				.done(function(data){
+					$('#ajax_status_bar').html(data);
+				});
+			}, 4000);
+		});
+	</script>
 </head>
 
 <body>		
@@ -42,20 +57,14 @@
 			)); 
 		?>
                 </div>
+		<div id="ajax_status_bar">
                 <?php 	
                 if(!Yii::app()->user->getIsGuest())
                 {
-			$this->widget('application.extensions.widgets.StatusBar', array(
-				'items'=>array(
-                                        Status::SYSTEM_STATUS,
-                                        Status::ZONE_1_STATUS,
-					Status::ZONE_2_STATUS,
-					Status::ZONE_3_STATUS,
-					Status::ZONE_4_STATUS,
-                                )
-			));
+			$this->widget('application.extensions.widgets.StatusBar');
                 }
 		?>
+		</div>
                 <div class="layout-row page-content">
                         <?php 
 				$this->displayAlert();

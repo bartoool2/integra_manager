@@ -33,11 +33,31 @@ class EventController extends Controller
 	
 	public function actionList()
 	{
-                $this->render('list');
+		$model = new Event('search');
+		
+		$model->unsetAttributes();		
+		
+		if(isset($_POST['Event']['class']) && $_POST['Event']['class'] == 'blank')
+		{
+			unset($_POST['Event']['class']);
+		}
+
+		if (isset($_POST['Event']))
+		{
+			if(!isset($_POST['Event']['clear']))
+			{
+				$model->attributes = $_POST['Event'];
+			}
+			else
+			{
+				unset($_POST['Event']);
+			}			
+		}	
+
+		$this->title = 'Lista zdarzeń';
+		
+		$this->render('list', array(
+			'model'=>$model,
+		));
 	}
-        
-        public function actionRefresh()
-        {
-                $this->render('list');
-        }
 }
