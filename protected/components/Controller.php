@@ -37,11 +37,11 @@ class Controller extends CController
 		if (Yii::app()->user->isUser)
 		{
 			$this->topmenu = array(	
-//				array(
-//					'name'=>Yii::t('view', 'Pomoc'),
-//					'url'=>$this->createUrl('site/help'),
-//					'type'=>'item'
-//				),
+				array(
+					'name'=>Yii::t('view', 'Użytkownicy'),
+					'url'=>$this->createUrl('integraUser/list'),
+					'type'=>'item'
+				),
 				array(
 					'name'=>Yii::t('view', 'Wyloguj'),
 					'url'=>$this->createUrl('site/logout'),
@@ -68,6 +68,12 @@ class Controller extends CController
 				array(
 					'type'=>'divider',
 //					'class'=>'mobile-only'
+				),
+				array(
+					'name'=>Yii::t('view', 'Użytkownicy'),
+					'url'=>$this->createUrl('integraUser/list'),
+					'type'=>'item',
+					'class'=>'mobile-only'
 				),
 				array(
 					'name'=>Yii::t('view', 'Wyloguj'),

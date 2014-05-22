@@ -80,7 +80,9 @@ class Event extends CActiveRecord
 			'description' => 'Opis',
 			'class'=>'Klasa zdarzenia',
 			'alias_date_from'=>'Data od',
-			'alias_date_to'=>'Data do'
+			'alias_date_to'=>'Data do',
+			'date'=>'Data',
+			'time'=>'Czas'
 		);
 	}
 

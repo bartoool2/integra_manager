@@ -54,10 +54,22 @@
         clear: both;
 }
 
+.single-row
+{
+        padding-top: 10px;
+        clear: both;
+}
+
 .dual-column
 {
         float: left;
         width: 50%;
+}
+
+.triple-column
+{
+        float: left;
+        width: 33%;
 }
 
 .dual-row
@@ -200,6 +212,13 @@
         }
         
         .dual-column
+        {
+                clear: both;
+                width: 100%;
+                padding-top: 10px;
+        }
+        
+        .triple-column
         {
                 clear: both;
                 width: 100%;
