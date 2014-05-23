@@ -24,7 +24,7 @@ $form = $this->beginWidget('CActiveForm', array(
 
 <?php echo $form->errorSummary($model); ?>
 
-<div id="event-search" style="display: <?php echo isset($_POST['IntegraUser']) ? 'block' : 'none'; ?>; width: 100%; padding: 20px">	  
+<div id="event-search" style="display: <?php echo isset($_POST['IntegraUser']) ? 'block' : 'none'; ?>; width: 100%; padding: 20px;">	  
 	<div class="dual-row">
 		<div class="dual-column">
 			<div style="float: left; text-align: right; padding-right: 20px; width: 30%">

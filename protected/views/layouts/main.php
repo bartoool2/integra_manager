@@ -37,7 +37,7 @@
 </head>
 
 <body>		
-	<div id="root">	
+	<div id="root" style="padding-bottom: 25px">	
 		<div class="layout-row desktop-only">
 			<div class="left">
 				<h1><small><a href="<?php echo Yii::app()->controller->createUrl('site/index'); ?>" id="logo">Integra manager</a></small></h1>

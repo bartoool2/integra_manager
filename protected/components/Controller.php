@@ -23,6 +23,7 @@ class Controller extends CController
 	public $alert_type;
 	public $navigation;
 	public $title;
+	
 	/**
 	 * @var array the breadcrumbs of the current page. The value of this property will
 	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}
@@ -32,7 +33,7 @@ class Controller extends CController
 	
 	public function init()
 	{
-		$logoutUrl = null;
+		$logoutUrl = null;		
 		
 		if (Yii::app()->user->isUser)
 		{

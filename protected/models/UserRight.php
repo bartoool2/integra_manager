@@ -104,14 +104,5 @@ class UserRight extends CActiveRecord
 		return parent::model($className);
 	}
 	
-	public function getRightsByByte($byte)
-	{
-		$criteria=new CDbCriteria;
-
-		$criteria->with = array('right');
-		$criteria->compare('right.byte_no', $byte);
-		$criteria->order = 'right.bit_no DESC';
-
-		return $this->findAll($criteria);
-	}
+	
 }

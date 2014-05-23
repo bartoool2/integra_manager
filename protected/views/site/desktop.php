@@ -87,7 +87,7 @@ echo CHtml::errorSummary($model, "<strong>Operacja nie powiodła się, ponieważ
 								</label>
 							</div>
 						</div>
-						<div class="arm_all_button mobile-only">
+						<div class="disarm_all_button mobile-only">
 							<input type="button" class="btn btn-large btn-primary" id="arm_all_button" value="Uzbrój cały system" onclick="javascript: arm_check_all()" style="margin-right: 25%"/>
 						</div>
 					</div>	

@@ -26358,3 +26358,483 @@ Stack trace:
 REQUEST_URI=/integra_manager/index.php?r=integraUser/create
 HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
 ---
+2014/05/23 17:42:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/index
+---
+2014/05/23 17:54:57 [error] [php] Undefined variable: zonesToDisarm (C:\xampp\htdocs\integra_manager\protected\views\integraUser\form.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): IntegraUserController->renderFile()
+#1 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): IntegraUserController->renderPartial()
+#2 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(87): IntegraUserController->render()
+#3 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionCreate()
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#6 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#9 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\views\integraUser\form.php (30)
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (87)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/23 17:55:16 [error] [exception.CException] exception 'CException' with message 'Właściwość "IntegraUser.alias_access_zone1" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('alias_access_zo...')
+#1 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('alias_access_zo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(1743): CHtml::resolveValue(Object(IntegraUser), 'alias_access_zo...')
+#3 C:\xampp\htdocs\integra_manager\framework\web\widgets\CActiveForm.php(831): CHtml::activeCheckBox(Object(IntegraUser), 'alias_access_zo...', Array)
+#4 C:\xampp\htdocs\integra_manager\protected\views\integraUser\form.php(52): CActiveForm->checkBox(Object(IntegraUser), 'alias_access_zo...', Array)
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('form', Array, true)
+#9 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(87): CController->render('form', Array)
+#10 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionCreate()
+#11 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('create')
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/cre...')
+#21 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/23 18:08:57 [error] [exception.CException] exception 'CException' with message 'Właściwość "IntegraUser.alias_rights1_7" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('alias_rights1_7')
+#1 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('alias_rights1_7')
+#2 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(1743): CHtml::resolveValue(Object(IntegraUser), 'alias_rights1_7')
+#3 C:\xampp\htdocs\integra_manager\framework\web\widgets\CActiveForm.php(831): CHtml::activeCheckBox(Object(IntegraUser), 'alias_rights1_7', Array)
+#4 C:\xampp\htdocs\integra_manager\protected\views\integraUser\form.php(74): CActiveForm->checkBox(Object(IntegraUser), 'alias_rights1_7')
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('form', Array, true)
+#9 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(87): CController->render('form', Array)
+#10 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionCreate()
+#11 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('create')
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/cre...')
+#21 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/23 20:02:49 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php:90)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#1 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (90)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/23 20:06:04 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php:90)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#1 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (90)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/23 20:06:33 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php:91)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#1 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (91)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/23 20:12:04 [error] [exception.CException] exception 'CException' with message 'Właściwość "UserRight.byte_no" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('byte_no')
+#1 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(95): CActiveRecord->__get('byte_no')
+#2 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionCreate()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/cre...')
+#13 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/create
+---
+2014/05/23 20:12:49 [error] [php] Undefined variable: i (C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#1 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (98)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/23 20:16:45 [error] [exception.CException] exception 'CException' with message 'Właściwość "Right.right" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('right')
+#1 C:\xampp\htdocs\integra_manager\protected\views\integraUser\form.php(74): CActiveRecord->__get('right')
+#2 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('form', Array, true)
+#6 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(89): CController->render('form', Array)
+#7 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionCreate()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('create')
+#17 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/cre...')
+#18 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/23 20:19:00 [error] [php] Undefined variable: action (C:\xampp\htdocs\integra_manager\protected\views\integraUser\form.php:64)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): IntegraUserController->renderFile()
+#1 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): IntegraUserController->renderPartial()
+#2 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(89): IntegraUserController->render()
+#3 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionCreate()
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#6 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#9 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\views\integraUser\form.php (64)
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (89)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/23 20:21:02 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\integra_manager\protected\components\Controller.php:38)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#1 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\components\Controller.php (38)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/23 21:02:26 [error] [system.db.CDbCommand] Wywołanie CDbCommand::execute() nie powiodło się: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '9' for key 'number_2'. Wykonywana instrukcja SQL to: INSERT INTO `im_integra_users` (`name`, `number`, `type`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (89)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/23 21:06:44 [error] [php] PDOStatement::execute(): MySQL server has gone away (C:\xampp\htdocs\integra_manager\framework\db\CDbCommand.php:508)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\schema\mysql\CMysqlSchema.php(166): CDbCommand->queryAll()
+#1 C:\xampp\htdocs\integra_manager\framework\db\schema\mysql\CMysqlSchema.php(126): CMysqlSchema->findColumns()
+#2 C:\xampp\htdocs\integra_manager\framework\db\schema\CDbSchema.php(103): CMysqlSchema->loadTable()
+#3 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(2361): CMysqlSchema->getTable()
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(658): StatusValue->getMetaData()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveFinder.php(383): StatusValue->getTableSchema()
+#7 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveFinder.php(278): CJoinElement->__construct()
+#8 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#9 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct()
+#10 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(280): Zone->getActiveFinder()
+#11 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(143): Zone->getRelated()
+#12 C:\xampp\htdocs\integra_manager\protected\models\Zone.php(126): Zone->__get()
+#13 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): Zone->getStatusClass()
+#14 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): Zone->__get()
+#15 C:\xampp\htdocs\integra_manager\protected\extensions\widgets\StatusBar.php(15): Zone->__get()
+#16 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(173): StatusBar->run()
+#17 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(194): SiteController->widget()
+#18 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionReloadStatuses()
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#21 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#23 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#24 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#25 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#27 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): SiteController->run()
+#28 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#29 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+in C:\xampp\htdocs\integra_manager\protected\models\Zone.php (126)
+in C:\xampp\htdocs\integra_manager\protected\extensions\widgets\StatusBar.php (15)
+in C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php (194)
+2014/05/23 21:51:30 [error] [php] Undefined variable: rights1 (C:\xampp\htdocs\integra_manager\protected\views\integraUser\view.php:53)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): IntegraUserController->renderFile()
+#1 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): IntegraUserController->renderPartial()
+#2 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(68): IntegraUserController->render()
+#3 unknown(0): IntegraUserController->actionView()
+#4 C:\xampp\htdocs\integra_manager\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#8 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#11 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#14 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/view&userId=5
+in C:\xampp\htdocs\integra_manager\protected\views\integraUser\view.php (53)
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (68)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/23 21:55:16 [error] [exception.CException] exception 'CException' with message 'Właściwość "IntegraUser.user_id" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('user_id')
+#1 C:\xampp\htdocs\integra_manager\protected\models\IntegraUser.php(221): CActiveRecord->__get('user_id')
+#2 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(66): IntegraUser->getRightsByByte(1)
+#3 [internal function]: IntegraUserController->actionView('5')
+#4 C:\xampp\htdocs\integra_manager\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(IntegraUserController), Array)
+#5 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(IntegraUserController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('view')
+#15 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/vie...')
+#16 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/view&userId=5
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/23 21:55:46 [error] [exception.CException] exception 'CException' with message 'Właściwość "UserRight.name" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name')
+#1 C:\xampp\htdocs\integra_manager\protected\views\integraUser\view.php(58): CActiveRecord->__get('name')
+#2 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(75): CController->render('view', Array)
+#7 [internal function]: IntegraUserController->actionView('5')
+#8 C:\xampp\htdocs\integra_manager\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(IntegraUserController), Array)
+#9 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(IntegraUserController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/vie...')
+#20 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/view&userId=5
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/23 22:12:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/23 22:12:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/23 22:12:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/23 22:12:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/23 22:12:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/23 22:12:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/23 22:12:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
