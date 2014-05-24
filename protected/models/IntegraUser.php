@@ -102,8 +102,8 @@ class IntegraUser extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'imUserRights' => array(self::HAS_MANY, 'UserRight', 'user_id'),
-			'imUserZones' => array(self::HAS_MANY, 'ImUserZones', 'user_id'),
+			'userRights' => array(self::HAS_MANY, 'UserRight', 'user_id'),
+			'userZones' => array(self::HAS_MANY, 'UserZone', 'user_id'),
 		);
 	}
 
@@ -167,25 +167,30 @@ class IntegraUser extends CActiveRecord
 	
 	public function getTypeName()
 	{
-		$types = array(
-			self::TYPE_NORMAL=>'Normalny',
-			self::TYPE_TIME_RENEWABLE=>'Odnawialny czasowo',
-			self::TYPE_TIME_NOT_RENEWABLE=>'Nieodnawialny czasowo',
-			self::TYPE_DURESS=>'Przymusowy',
-			self::TYPE_MONO_OUTPUTS=>'Wyjścia MONO',
-			self::TYPE_BI_OUTPUTS=>'Wyjścia BI',
-			self::TYPE_PARTITIONS_TEMP_BLOCKING=>'Tymczasowo blokujący strefy',
-			self::TYPE_ACCESS_TO_CASH_MACHINE=>'Dostęp do kas',
-			self::TYPE_GUARD=>'Strażnik',
-			self::TYPE_SCHEDULE=>'Schemat'
-		);
+		if($this->type != null)
+		{
+			$types = array(
+				self::TYPE_NORMAL=>'Normalny',
+				self::TYPE_TIME_RENEWABLE=>'Odnawialny czasowo',
+				self::TYPE_TIME_NOT_RENEWABLE=>'Nieodnawialny czasowo',
+				self::TYPE_DURESS=>'Przymusowy',
+				self::TYPE_MONO_OUTPUTS=>'Wyjścia MONO',
+				self::TYPE_BI_OUTPUTS=>'Wyjścia BI',
+				self::TYPE_PARTITIONS_TEMP_BLOCKING=>'Tymczasowo blokujący strefy',
+				self::TYPE_ACCESS_TO_CASH_MACHINE=>'Dostęp do kas',
+				self::TYPE_GUARD=>'Strażnik',
+				self::TYPE_SCHEDULE=>'Schemat'
+			);
+
+			return $types[$this->type];
+		}
 		
-		return $types[$this->type];
+		return '';
 	}
 	
 	public function parseRights()
 	{
-		if(count($this->imUserRights) == 0)
+		if(count($this->userRights) == 0)
 		{
 			if($this->rights_1 != null && $this->rights_2 != null && $this->rights_3 != null)
 			{
@@ -210,23 +215,66 @@ class IntegraUser extends CActiveRecord
 		}
 		else
 		{
-//			for($i = 1; $i < 4; $i++)
-//			{
-//				$rights = Right::model()->getRightsByByte($i);
-//				$rightsNumber = $this->{'rights_'.$i};
-//				$bin = str_pad(decbin($rightsNumber), 8, "0", STR_PAD_LEFT);
-//
-//				for($x = 0; $x < 8; $x++)
-//				{
-//					$userRight = new UserRight;
-//
-//					$userRight->user_id = $this->id;
-//					$userRight->right_id = $rights[$x]->id;
-//					$userRight->allowed = intval($bin[$x]);
-//
-//					$userRight->save();
-//				}				
-//			}	
+			for($i = 1; $i < 4; $i++)
+			{				
+				$rights = $this->getRightsBinaryByByte($i);
+				$rightsNumber = $this->{'rights_'.$i};
+				$bin = str_pad(decbin($rightsNumber), 8, "0", STR_PAD_LEFT);
+				
+				if($rights != $bin)
+				{
+					for($x = 0; $x < 8; $x++)
+					{
+						if($rights[$x] != $bin[$x])
+						{
+							$userRight = $this->getUserRightByByteAndBit($i, (7-$x));
+
+							$userRight->allowed = intval($bin[$x]);
+
+							$userRight->save();
+						}						
+					}	
+				}
+			}	
+		}
+	}
+	
+	public function parseZones()
+	{
+		if(count($this->userZones) == 0)
+		{
+			if($this->zones != null)
+			{
+				$zones = Zone::model()->findAll();
+				$zoneArray = json_decode($this->zones);
+
+				foreach($zones as $zone)
+				{
+					$userZone = new UserZone;
+						
+					$userZone->zone_id = $zone->id;
+					$userZone->user_id = $this->id;
+					$userZone->allowed = in_array($zone->number, $zoneArray);
+					
+					$userZone->save();
+				}				
+			}
+		}
+		else
+		{
+			$userZones = $this->userZones;
+			$zoneArray = json_decode($this->zones);
+
+			foreach($userZones as $zone)
+			{
+				$zoneInArray = in_array($zone->zone->number, $zoneArray);
+				if($zone->allowed != $zoneInArray)
+				{
+					$zone->allowed = $zoneInArray;
+						
+					$zone->save();
+				}
+			}
 		}
 	}
 	
@@ -234,7 +282,17 @@ class IntegraUser extends CActiveRecord
 	{
 		$model = $this->findByPk($id);
 		
-		//przepisanie uprawnień do aliasów
+		foreach($model->userRights as $right)
+		{
+			$model->{'alias_rights'.$right->right->byte_no.'_'.$right->right->bit_no} = $right->allowed;
+		}
+		
+		foreach($model->userZones as $zone)
+		{
+			$model->{'alias_access_zone'.$zone->zone->number} = $zone->allowed;
+		}
+		
+		return $model;
 	}
 	
 	public function getRightsByByte($byte)
@@ -249,6 +307,32 @@ class IntegraUser extends CActiveRecord
 		return UserRight::model()->findAll($criteria);
 	}
 	
+	public function getUserRightByByteAndBit($byte, $bit)
+	{
+		$criteria = new CDbCriteria;
+		
+		$criteria->with = array('right');
+		$criteria->compare('right.byte_no', $byte);
+		$criteria->compare('right.bit_no', $bit);
+		$criteria->compare('user_id', $this->id);
+
+		return UserRight::model()->find($criteria);
+	}
+	
+	public function getRightsBinaryByByte($byte)
+	{
+		$model = $this->getRightsByByte($byte);
+		
+		$rightsString = '';
+		
+		foreach($model as $right)
+		{
+			$rightsString .= $right->allowed;
+		}
+		
+		return $rightsString;
+	}
+	
 	public function serializeRights($rights)
 	{
 		$rightsString = '';
@@ -261,6 +345,22 @@ class IntegraUser extends CActiveRecord
 		}
 		
 		$this->{'rights_'.$byte_no} = bindec($rightsString);
+		
+		return $this->save();
+	}
+	
+	public function serializeZones()
+	{
+		$zones = array();
+		foreach($this->userZones as $zone)
+		{
+			if($zone->allowed)
+			{
+				array_push($zones, intval($zone->zone->number));
+			}
+		}
+		
+		$this->zones = json_encode($zones);
 		
 		return $this->save();
 	}

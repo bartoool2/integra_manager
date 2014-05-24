@@ -67,7 +67,7 @@
 		</div>
                 <div class="layout-row page-content">
                         <?php 
-				$this->displayAlert();
+				Yii::app()->user->displayAlert();
 				echo $content; 
 			?>
                 </div>

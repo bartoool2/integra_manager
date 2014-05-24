@@ -52,8 +52,8 @@ $this->widget('application.extensions.widgets.ActionTitleBar', array(
 						<div class="zone-checkbox">
 							<div class="checkbox">
 								<label>
-									<?php echo CHtml::checkBox('checkbox', $model->{'alias_access_zone'.$zone->number}, array('style'=>'margin-left: 15%', 'disabled'=>'true')); 
-									echo CHtml::tag("span", array('style'=>'margin-left: 20%'), $zone->number.'. '.$zone->name);
+									<?php echo CHtml::checkBox('checkbox', $zone->allowed, array('style'=>'margin-left: 15%', 'disabled'=>'true')); 
+									echo CHtml::tag("span", array('style'=>'margin-left: 20%'), $zone->zone->number.'. '.$zone->zone->name);
 									?>
 								</label>
 							</div>											

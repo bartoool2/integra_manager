@@ -62,19 +62,18 @@ class IntegraUserController extends Controller
 		
 		$this->title = 'Użytkownik: '.$model->name;
 		$model->parseRights();
+		$model->parseZones();
 		
 		$rights1 = $model->getRightsByByte(1);
 		$rights2 = $model->getRightsByByte(2);
 		$rights3 = $model->getRightsByByte(3);
-		
-		$zonesToCheck = Zone::model()->findAll();
 		
 		$this->render('view', array(
 			'model'=>$model,
 			'rights1'=>$rights1,
 			'rights2'=>$rights2,
 			'rights3'=>$rights3,
-			'zonesToCheck'=>$zonesToCheck,
+			'zonesToCheck'=>$model->userZones,
 		));
 	}
 	
@@ -98,50 +97,79 @@ class IntegraUserController extends Controller
 			{
 				if($model->save())
 				{
-					$rights = array(
-						$rights1,
-						$rights2,
-						$rights3
-					);
-
-					$rightsSaved = true;
-					foreach($rights as $rightCol)
+					$zonesSaved = true;
+					foreach($zonesToCheck as $zone)
 					{
-						$rightsToPass = array();
-						foreach($rightCol as $right)
-						{
-							$userRight = new UserRight;
-
-							$userRight->right_id = $right->id;
-							$userRight->user_id = $model->id;
-							$userRight->allowed = $model->{'alias_rights'.$right->byte_no.'_'.$right->bit_no};
-
-							if(!$userRight->save())
-							{
-								$rightsSaved = false;
-								break 2;
-							}
-							else
-							{
-								array_push($rightsToPass, $userRight);
-							}
-						}		
+						$userZone = new UserZone;
 						
-						$rightsSaved = $model->serializeRights($rightsToPass);
-						if(!$rightsSaved)
+						$userZone->zone_id = $zone->id;
+						$userZone->user_id = $model->id;
+						$userZone->allowed = $model->{'alias_access_zone'.$zone->number};
+
+						if(!$userZone->save())
 						{
+							$zonesSaved = false;
 							break;
 						}
 					}
 					
-					if($rightsSaved)
+					if($zonesSaved)
 					{
-						$transaction->commit();
-						
-						$this->redirect($this->createUrl('integraUser/list'));
-						
-						$this->setAlert('Potwierdzenie', 'Użytkownik zapisany pomyślnie');
+						$zonesSaved = $model->serializeZones();
 					}
+					
+					if($zonesSaved)
+					{
+						$rights = array(
+							$rights1,
+							$rights2,
+							$rights3
+						);
+
+						$allDataSaved = true;
+						foreach($rights as $rightCol)
+						{
+							$rightsToPass = array();
+							foreach($rightCol as $right)
+							{
+								$userRight = new UserRight;
+
+								$userRight->right_id = $right->id;
+								$userRight->user_id = $model->id;
+								$userRight->allowed = $model->{'alias_rights'.$right->byte_no.'_'.$right->bit_no};
+
+								if(!$userRight->save())
+								{
+									$allDataSaved = false;
+									break 2;
+								}
+								else
+								{
+									array_push($rightsToPass, $userRight);
+								}
+							}		
+
+							$allDataSaved = $model->serializeRights($rightsToPass);
+							
+							if(!$allDataSaved)
+							{
+								break;
+							}
+						}										
+
+						if($allDataSaved)
+						{
+							$transaction->commit();
+
+							Yii::app()->user->setAlert('Potwierdzenie', 'Użytkownik zapisany pomyślnie');
+
+							$this->redirect($this->createUrl('integraUser/list'));
+						}
+						else
+						{
+							$transaction->rollback();
+						}
+					}		
 					else
 					{
 						$transaction->rollback();
@@ -175,29 +203,87 @@ class IntegraUserController extends Controller
 		$rights2 = $model->getRightsByByte(2);
 		$rights3 = $model->getRightsByByte(3);
 		
-		$zonesToCheck = Zone::model()->findAll();
+		$zonesToCheck = $model->userZones;
 		
 		if(isset($_POST['IntegraUser']))
 		{
-			$model->attributes = $_POST['IntegraUser'];
+			$transaction = Yii::app()->db->beginTransaction();
 			
-			$rights = array(
-				$rights1,
-				$rights2,
-				$rights3
-			);
-			
-			foreach($rights as $rightsCol)
+			try 
 			{
-				foreach($rightsCol as $singleRight)
+				$model->attributes = $_POST['IntegraUser'];
+			
+				$zonesSaved = true;
+				
+				foreach($zonesToCheck as $zone)
 				{
-					$currentAlias = $model->{'alias_rights'.$singleRight->right->byte_no.'_'.$singleRight->right->bit_no};
-					if($singleRight->allowed != $currentAlias)
+					if($zone->allowed != $model->{'alias_access_zone'.$zone->zone->number})
 					{
-						print $singleRight->id.'; ';
+						$zone->allowed = $model->{'alias_access_zone'.$zone->zone->number};
+						
+						if(!$zone->save())
+						{
+							$zonesSaved = false;
+							break;
+						}
 					}
-				}				
-			}
+				}
+				
+				if($zonesSaved)
+				{
+					$zonesSaved = $model->serializeZones();
+				}
+				
+				if($zonesSaved)
+				{
+					$rights = array(
+						$rights1,
+						$rights2,
+						$rights3
+					);
+
+					$allChangesSaved = $model->save();
+
+					if($allChangesSaved)
+					{
+						foreach($rights as $rightsCol)
+						{
+							foreach($rightsCol as $singleRight)
+							{
+								$currentAlias = $model->{'alias_rights'.$singleRight->right->byte_no.'_'.$singleRight->right->bit_no};
+								if($singleRight->allowed != $currentAlias)
+								{
+									$singleRight->allowed = $currentAlias;
+									if(!$singleRight->save())
+									{
+										$allChangesSaved = false;
+										break 2;
+									}
+								}
+							}
+
+							$allChangesSaved = $model->serializeRights($rightsCol);
+							if(!$allChangesSaved)
+							{
+								break;
+							}
+						}
+
+						if($allChangesSaved)
+						{
+							$transaction->commit();
+
+							Yii::app()->user->setAlert('Potwierdzenie', 'Dane użytkownika zostały zaktualizowane');
+
+							$this->redirect($this->createUrl('integraUser/view', array('userId'=>$model->id)));												
+						}
+					}
+				}
+			} 
+			catch (Exception $ex) 
+			{
+				$transaction->rollback();
+			}			
 		}
 		
 		$this->render('form', array(

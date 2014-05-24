@@ -88,7 +88,7 @@ class SiteController extends Controller
 						
 			if($request->save())
 			{
-				$this->setAlert('Potwierdzenie', 'Żądanie zostało wysłane do centrali');
+				Yii::app()->user->setAlert('Potwierdzenie', 'Żądanie zostało wysłane do centrali');
 			}
 //			else
 //			{

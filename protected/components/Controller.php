@@ -4,12 +4,7 @@
  * All controller classes for this application should extend from this base class.
  */
 class Controller extends CController
-{
-	const ALERT_RED = 'alert-danger';
-	const ALERT_YELLOW = 'alert-warning';
-	const ALERT_BLUE = 'alert-info';
-	const ALERT_GREEN = 'alert-success';
-	
+{	
 	public $layout='//layouts/column1';
 	/**
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
@@ -17,10 +12,7 @@ class Controller extends CController
 	public $topmenu = array();
 	
 	public $mainmenu = array();
-	
-	public $alert_strong;
-	public $alert;
-	public $alert_type;
+		
 	public $navigation;
 	public $title;
 	
@@ -114,24 +106,5 @@ class Controller extends CController
 		}
 		
 		parent::init();
-	}
-	
-	public function displayAlert()
-	{
-		if($this->alert != NULL)
-		{
-			?>
-				<div class="alert <?php echo $this->alert_type; ?> alert-dismissable">
-					<strong><?php echo $this->alert_strong; ?></strong> <?php echo $this->alert; ?>
-				</div>
-			<?php
-		}
-	}
-	
-	public function setAlert($strong, $text, $type = self::ALERT_GREEN)
-	{
-		$this->alert = $text;
-		$this->alert_strong = $strong;
-		$this->alert_type = $type;
-	}
+	}		
 }

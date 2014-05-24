@@ -49,12 +49,12 @@ $form = $this->beginWidget('CActiveForm', array(
 			<?php echo $form->labelEx($model,'type',array('class'=>'control-label', 'style'=>'font-weight: normal')); ?>
 		</div>
 		<div style="float: left; width: 85%">
-			<?php echo $form->textField($model,'type',array('class'=>'form-control')); ?>
+			<?php echo $form->dropDownList($model,'type',  IntegraUser::getTypeEnum(),array('class'=>'form-control')); ?>
 		</div>
 	</div>
 	<div style="clear: both; width: 100%; padding-top: 10px">
 		<div style="float: left; text-align: right; width: 50%">
-			<button class="btn btn-primary" style="margin-right: 20px;" type="submit">Filtruj</button>
+			<button class="btn btn-primary" style="margin-right: 20px;" type="submit">Szukaj</button>
 		</div>
 		<div style="width: 50%; float: left">
 			<button name="IntegraUser[clear]" value="1" class="btn btn-default" style="margin-left: 20px;" type="submit">Wyczyść</button>
@@ -91,6 +91,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		array(
                         'name'=>'type',
 			'type'=>'raw',
+			'value'=>'$data->typeName',
                         'htmlOptions'=>array(
                                 'style'=>'width: 20%',
                         )

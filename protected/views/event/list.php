@@ -3,7 +3,7 @@ $this->widget('application.extensions.widgets.ActionTitleBar', array(
         'title'=>'Lista zdarzeń',
         'items'=>array(
                 array(
-                        'label'=>'Filtry',
+                        'label'=>'Szukaj',
                         'url'=>'#',
                         'class'=>'btn btn-default action-btn',
 			'onclick'=>'toggle_search()'
@@ -58,7 +58,7 @@ $form = $this->beginWidget('CActiveForm', array(
 	</div>
 	<div style="clear: both; width: 100%; padding-top: 10px">
 		<div style="float: left; text-align: right; width: 50%">
-			<button class="btn btn-primary" style="margin-right: 20px;" type="submit">Filtruj</button>
+			<button class="btn btn-primary" style="margin-right: 20px;" type="submit">Szukaj</button>
 		</div>
 		<div style="width: 50%; float: left">
 			<button name="Event[clear]" value="1" class="btn btn-default" style="margin-left: 20px;" type="submit">Wyczyść</button>

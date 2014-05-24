@@ -1,6 +1,19 @@
 <?php
+$action = Yii::app()->controller->action->id;
+$pageTitle = '';
+
+switch ($action)
+{
+	case 'create':
+		$pageTitle = 'Nowy użytkownik';
+		break;
+	case 'update':
+		$pageTitle = 'Edycja użytkownika';
+		break;
+}
+
 $this->widget('application.extensions.widgets.ActionTitleBar', array(
-        'title'=>'Nowy użytkownik',
+        'title'=>$pageTitle,
 	'items'=>array(
 		array(
                         'label'=>'Zapisz',
@@ -20,7 +33,6 @@ $form = $this->beginWidget('application.extensions.Form', array(
     'id'=>'control-form',    
 )); 
 
-$action = Yii::app()->controller->action->id;
 echo CHtml::errorSummary($model, "<strong>Operacja nie powiodła się, ponieważ:</strong>", null, array("class"=>"alert alert-danger", 'style'=>'margin-top: 25px'));
 ?>
 
@@ -60,20 +72,40 @@ echo CHtml::errorSummary($model, "<strong>Operacja nie powiodła się, ponieważ
 			</div>
 		</div>
 		<div style="display: table; width: 100%;">
-			<?php							
-				foreach($zonesToCheck as $zone)
+			<?php		
+				if($action == 'create')
 				{
-					?>
-						<div class="zone-checkbox">
-							<div class="checkbox">
-								<label>
-									<?php echo $form->checkbox($model, 'alias_access_zone'.$zone->number, array('class'=>"zone_check_checkbox", 'style'=>'margin-left: 15%')); 
-									echo CHtml::tag("span", array('style'=>'margin-left: 20%'), $zone->number.'. '.$zone->name);
-									?>
-								</label>
-							</div>											
-						</div>
-					<?php
+					foreach($zonesToCheck as $zone)
+					{
+						?>
+							<div class="zone-checkbox">
+								<div class="checkbox">
+									<label>
+										<?php echo $form->checkbox($model, 'alias_access_zone'.$zone->number, array('class'=>"zone_check_checkbox", 'style'=>'margin-left: 15%')); 
+										echo CHtml::tag("span", array('style'=>'margin-left: 20%'), $zone->number.'. '.$zone->name);
+										?>
+									</label>
+								</div>											
+							</div>
+						<?php
+					}
+				}
+				else if($action == 'update')
+				{
+					foreach($zonesToCheck as $zone)
+					{
+						?>
+							<div class="zone-checkbox">
+								<div class="checkbox">
+									<label>
+										<?php echo $form->checkbox($model, 'alias_access_zone'.$zone->zone->number, array('class'=>"zone_check_checkbox", 'style'=>'margin-left: 15%')); 
+										echo CHtml::tag("span", array('style'=>'margin-left: 20%'), $zone->zone->number.'. '.$zone->zone->name);
+										?>
+									</label>
+								</div>											
+							</div>
+						<?php
+					}
 				}
 			?>							
 		</div>

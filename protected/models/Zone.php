@@ -125,6 +125,8 @@ class Zone extends CActiveRecord
 	{
 		switch($this->_status->value)
 		{
+			case self::STATUS_DISARMED:
+				return 'default';
 			case self::STATUS_ARMED:
 				return 'success';
 			case self::STATUS_TIME_TO_ENTER:
