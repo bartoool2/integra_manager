@@ -43,12 +43,12 @@ class Event extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('index_1, index_2, index_3, call_index_1, call_index_2, call_index_3, date, time', 'required'),
-			array('index_1, index_2, index_3, call_index_1, call_index_2, call_index_3, class', 'numerical', 'integerOnly'=>true),
+			array('index_1, index_2, index_3, call_index_1, call_index_2, call_index_3, event_class', 'numerical', 'integerOnly'=>true),
 			array('description', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, index_1, index_2, index_3, call_index_1, call_index_2, call_index_3,
-				 alias_date_from, alias_date_to, date, time, description, class', 'safe', 'on'=>'search'),
+				 alias_date_from, alias_date_to, date, time, description, event_class', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,7 +78,7 @@ class Event extends CActiveRecord
 			'call_index_3' => 'Call Index 3',
 			'time' => 'Czas',
 			'description' => 'Opis',
-			'class'=>'Klasa zdarzenia',
+			'event_class'=>'Klasa zdarzenia',
 			'alias_date_from'=>'Data od',
 			'alias_date_to'=>'Data do',
 			'date'=>'Data',
@@ -113,7 +113,7 @@ class Event extends CActiveRecord
 		$criteria->compare('call_index_3',$this->call_index_3);
 //		$criteria->compare('time',$this->time,true);
 		$criteria->compare('description',$this->description,true);
-		$criteria->compare('class',$this->class,true);
+		$criteria->compare('event_class',$this->event_class,true);
 		
 		if($this->alias_date_from != '')
 		{
@@ -170,7 +170,7 @@ class Event extends CActiveRecord
 			self::CLASS_SYSTEM_EVENTS=>'info',
 		);
 		
-		return $classes[$this->class];
+		return $classes[$this->event_class];
 	}
 	
 	public function getClassName()
@@ -186,6 +186,6 @@ class Event extends CActiveRecord
 			self::CLASS_SYSTEM_EVENTS=>'Zdarzenia systemowe',
 		);
 		
-		return $names[$this->class];
+		return $names[$this->event_class];
 	}
 }

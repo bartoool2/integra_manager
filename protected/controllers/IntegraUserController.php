@@ -159,6 +159,11 @@ class IntegraUserController extends Controller
 
 						if($allDataSaved)
 						{
+							$request = new Request;
+							$request->user = $model;
+							$request->saveNewRequest(Request::CODE_CREATE_USER);
+							$request->save();
+								
 							$transaction->commit();
 
 							Yii::app()->user->setAlert('Potwierdzenie', 'Użytkownik zapisany pomyślnie');

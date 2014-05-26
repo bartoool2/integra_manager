@@ -17,6 +17,9 @@ class Request extends CActiveRecord
 	const CODE_DISARM = 1;
 	const CODE_ARM = 2;
 	const CODE_CLEAR_ALARM = 3;
+	const CODE_READ_USERS_LIST = 4;
+	const CODE_CREATE_USER = 5;
+	const CODE_UPDATE_USER = 6;
 	
 	const STATUS_UNDONE = 0;
 	const STATUS_DONE = 1;
@@ -59,6 +62,7 @@ class Request extends CActiveRecord
 	public $disarm_code;
 	public $arm_code;
 	public $clear_alarm_code;
+	public $user;
 	
 	/**
 	 * @return string the associated database table name
@@ -220,6 +224,18 @@ class Request extends CActiveRecord
 			{
 				array_push($additionalData, 4);
 			}
+		}
+		else if($this->request_code == Request::CODE_UPDATE_USER || $this->request_code == Request::CODE_CREATE_USER)
+		{
+			$this->pass_code = '5272';
+			
+			$additionalData['zones'] = $this->user->zones;
+			$additionalData['type'] = IntegraUser::TYPE_NORMAL;
+			$additionalData['rights_1'] = $this->user->rights_1;
+			$additionalData['rights_2'] = $this->user->rights_2;
+			$additionalData['rights_3'] = $this->user->rights_3;
+			$additionalData['name'] = $this->user->name;
+			
 		}
 		
 		$this->additional_data = json_encode($additionalData);

@@ -31,10 +31,10 @@ $form = $this->beginWidget('CActiveForm', array(
 		</div>
 		<div class="dual-column">
 			<div style="float: left; width: 30%; text-align: right; padding-right: 20px;">
-				<?php echo $form->labelEx($model,'class',array('class'=>'control-label', 'style'=>'font-weight: normal')); ?>
+				<?php echo $form->labelEx($model,'event_class',array('class'=>'control-label', 'style'=>'font-weight: normal')); ?>
 			</div>
 			<div style="float: left; width: 70%">
-				<?php echo $form->dropDownList($model,'class',Event::getEventClasses(), array('class'=>'form-control')); ?>
+				<?php echo $form->dropDownList($model,'event_class',Event::getEventClasses(), array('class'=>'form-control')); ?>
 			</div>
 		</div>  
 	</div>  
@@ -76,6 +76,14 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'ajaxType'=>'POST',
         'template'=>'{items}{pager}{summary}',
         'summaryText'=>'Wyświetlono {start}-{end} z {count} wyników',
+	'pager'=>array(
+		'maxButtonCount'=>6,
+		'pageSize'=>15,
+		'internalPageCssClass'=>'pagination-button',
+		'nextPageCssClass'=>'pagination-button',
+		'previousPageCssClass'=>'pagination-button',
+		'header'=>''
+	),
         'columns'=>array(
                 'id',
                 array(
@@ -85,7 +93,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
                         )
                 ),
 		array(
-                        'name'=>'class',
+                        'name'=>'event_class',
 			'type'=>'raw',
 			'value'=>'CHtml::tag("span", array("class"=>"label label-".$data->classCssClass, "style"=>"display: block; width: 80%; height: 20px"), $data->className)',
                         'htmlOptions'=>array(

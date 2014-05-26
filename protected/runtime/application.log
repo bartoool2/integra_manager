@@ -27345,3 +27345,311 @@ Stack trace:
 REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
 HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/create
 ---
+2014/05/26 09:40:39 [error] [exception.CException] exception 'CException' with message 'Ścieżka CAssetManager.basePath "C:\xampp\htdocs\integra_manager\assets" jest nieprawidłowa. Upewnij się, że ten katalog istnieje i jest dostępny do zapisu dla procesu serwera.' in C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php:138
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('C:\xampp\htdocs...')
+#1 C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 C:\xampp\htdocs\integra_manager\framework\zii\widgets\grid\CGridView.php(350): CAssetManager->publish('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\integra_manager\protected\views\integraUser\list.php(104): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#10 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(56): CController->render('list', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionList()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#21 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/lis...')
+#22 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/list
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/create
+---
+2014/05/26 13:19:33 [error] [exception.CException] exception 'CException' with message 'Właściwość "Event.class" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('class')
+#1 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('class')
+#2 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Event), 'class')
+#3 C:\xampp\htdocs\integra_manager\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Event), 'class', Array, Array)
+#4 C:\xampp\htdocs\integra_manager\protected\views\event\list.php(37): CActiveForm->dropDownList(Object(Event), 'class', Array, Array)
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#9 C:\xampp\htdocs\integra_manager\protected\controllers\EventController.php(61): CController->render('list', Array)
+#10 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): EventController->actionList()
+#11 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('event/list')
+#21 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/integra_manager/index.php?r=event/list
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/26 13:21:04 [error] [exception.CException] exception 'CException' with message 'Właściwość "Event.class" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('class')
+#1 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('class')
+#2 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Event), 'class')
+#3 C:\xampp\htdocs\integra_manager\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Event), 'class', Array, Array)
+#4 C:\xampp\htdocs\integra_manager\protected\views\event\list.php(37): CActiveForm->dropDownList(Object(Event), 'class', Array, Array)
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#9 C:\xampp\htdocs\integra_manager\protected\controllers\EventController.php(61): CController->render('list', Array)
+#10 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): EventController->actionList()
+#11 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('event/list')
+#21 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/integra_manager/index.php?r=event/list
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/26 13:21:21 [error] [exception.CException] exception 'CException' with message 'Właściwość "Event.class" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('class')
+#1 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('class')
+#2 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Event), 'class')
+#3 C:\xampp\htdocs\integra_manager\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Event), 'class', Array, Array)
+#4 C:\xampp\htdocs\integra_manager\protected\views\event\list.php(37): CActiveForm->dropDownList(Object(Event), 'class', Array, Array)
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#9 C:\xampp\htdocs\integra_manager\protected\controllers\EventController.php(61): CController->render('list', Array)
+#10 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): EventController->actionList()
+#11 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('event/list')
+#21 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/integra_manager/index.php?r=event/list
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/26 13:21:44 [error] [exception.CException] exception 'CException' with message 'Właściwość "Event.class" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): CComponent->__get('class')
+#1 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('class')
+#2 C:\xampp\htdocs\integra_manager\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Event), 'class')
+#3 C:\xampp\htdocs\integra_manager\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Event), 'class', Array, Array)
+#4 C:\xampp\htdocs\integra_manager\protected\views\event\list.php(37): CActiveForm->dropDownList(Object(Event), 'class', Array, Array)
+#5 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#9 C:\xampp\htdocs\integra_manager\protected\controllers\EventController.php(61): CController->render('list', Array)
+#10 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): EventController->actionList()
+#11 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('event/list')
+#21 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/integra_manager/index.php?r=event/list
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/26 14:28:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/26 15:50:28 [error] [php] Indirect modification of overloaded property Request::$additional_data has no effect (C:\xampp\htdocs\integra_manager\protected\models\Request.php:231)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\models\Request.php (231)
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (164)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/26 15:54:41 [error] [php] Undefined variable: additional_data (C:\xampp\htdocs\integra_manager\protected\models\Request.php:231)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\models\Request.php (231)
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (164)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/26 15:55:34 [error] [php] Undefined index: zones (C:\xampp\htdocs\integra_manager\protected\models\Request.php:231)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): IntegraUserController->runAction()
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): IntegraUserController->filterAccessControl()
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): IntegraUserController->runActionWithFilters()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): IntegraUserController->run()
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=integraUser/create
+in C:\xampp\htdocs\integra_manager\protected\models\Request.php (231)
+in C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php (164)
+in C:\xampp\htdocs\integra_manager\index.php (13)
+2014/05/26 21:14:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/26 21:17:56 [error] [exception.CException] exception 'CException' with message 'Właściwość "CLinkPager.pageCount" jest tylko do odczytu.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:170
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CWidgetFactory.php(161): CComponent->__set('pageCount', 5)
+#1 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CGridView), 'CLinkPager', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(172): CBaseController->createWidget('CLinkPager', Array)
+#3 C:\xampp\htdocs\integra_manager\framework\zii\widgets\CBaseListView.php(271): CBaseController->widget('CLinkPager', Array)
+#4 C:\xampp\htdocs\integra_manager\framework\zii\widgets\CBaseListView.php(167): CBaseListView->renderPager()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 C:\xampp\htdocs\integra_manager\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}{...')
+#7 C:\xampp\htdocs\integra_manager\framework\zii\widgets\CBaseListView.php(135): CBaseListView->renderContent()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(173): CBaseListView->run()
+#9 C:\xampp\htdocs\integra_manager\protected\views\event\list.php(116): CBaseController->widget('zii.widgets.gri...', Array)
+#10 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#14 C:\xampp\htdocs\integra_manager\protected\controllers\EventController.php(61): CController->render('list', Array)
+#15 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): EventController->actionList()
+#16 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#25 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('event/list')
+#26 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/integra_manager/index.php?r=event/list
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/26 21:30:15 [error] [exception.CException] exception 'CException' with message 'Właściwość "CLinkPager.prevPageCssClass" nie jest zdefiniowana.' in C:\xampp\htdocs\integra_manager\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CWidgetFactory.php(161): CComponent->__set('prevPageCssClas...', 'btn btn-default')
+#1 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CGridView), 'CLinkPager', Array)
+#2 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(172): CBaseController->createWidget('CLinkPager', Array)
+#3 C:\xampp\htdocs\integra_manager\framework\zii\widgets\CBaseListView.php(271): CBaseController->widget('CLinkPager', Array)
+#4 C:\xampp\htdocs\integra_manager\framework\zii\widgets\CBaseListView.php(167): CBaseListView->renderPager()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 C:\xampp\htdocs\integra_manager\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}{...')
+#7 C:\xampp\htdocs\integra_manager\framework\zii\widgets\CBaseListView.php(135): CBaseListView->renderContent()
+#8 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(173): CBaseListView->run()
+#9 C:\xampp\htdocs\integra_manager\protected\views\event\list.php(120): CBaseController->widget('zii.widgets.gri...', Array)
+#10 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#14 C:\xampp\htdocs\integra_manager\protected\controllers\EventController.php(61): CController->render('list', Array)
+#15 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): EventController->actionList()
+#16 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#25 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('event/list')
+#26 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/integra_manager/index.php?r=event/list&Event_page=3
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=event/list&Event_page=6
+---

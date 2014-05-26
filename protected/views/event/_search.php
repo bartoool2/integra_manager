@@ -8,9 +8,9 @@ $form = $this->beginWidget('application.extensions.widgets.Search', array(
 
 <div class="row-fluid">
 	<div class="control-group">
-		<?php echo $form->activeLabel($model, 'class'); ?>
+		<?php echo $form->activeLabel($model, 'event_class'); ?>
 		<div class="controls">
-			<?php echo $form->textField($model, 'class'); ?>
+			<?php echo $form->textField($model, 'event_class'); ?>
 		</div>
 	</div> 
 </div>
