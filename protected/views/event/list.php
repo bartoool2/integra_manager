@@ -8,6 +8,11 @@ $this->widget('application.extensions.widgets.ActionTitleBar', array(
                         'class'=>'btn btn-default action-btn',
 			'onclick'=>'toggle_search()'
                 ),
+		array(
+                        'label'=>'Aktualizuj',
+                        'url'=>Yii::app()->controller->createUrl('event/updateList'),
+                        'class'=>'btn btn-primary action-btn',
+                ),
         ),
 ));
 

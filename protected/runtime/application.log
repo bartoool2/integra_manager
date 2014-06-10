@@ -27653,3 +27653,1020 @@ Stack trace:
 REQUEST_URI=/integra_manager/index.php?r=event/list&Event_page=3
 HTTP_REFERER=http://localhost/integra_manager/index.php?r=event/list&Event_page=6
 ---
+2014/05/27 11:57:18 [error] [exception.CException] exception 'CException' with message 'ÅšcieÅ¼ka CAssetManager.basePath "C:\xampp\htdocs\integra_manager\assets" jest nieprawidÅ‚owa. Upewnij siÄ™, Å¼e ten katalog istnieje i jest dostÄ™pny do zapisu dla procesu serwera.' in C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php:138
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('C:\xampp\htdocs...')
+#1 C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 C:\xampp\htdocs\integra_manager\framework\zii\widgets\grid\CGridView.php(350): CAssetManager->publish('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\integra_manager\protected\views\integraUser\list.php(104): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#10 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(56): CController->render('list', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionList()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#21 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/lis...')
+#22 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/list
+HTTP_REFERER=http://localhost/integra_manager/
+---
+2014/05/27 11:57:42 [error] [exception.CException] exception 'CException' with message 'ÅšcieÅ¼ka CAssetManager.basePath "C:\xampp\htdocs\integra_manager\assets" jest nieprawidÅ‚owa. Upewnij siÄ™, Å¼e ten katalog istnieje i jest dostÄ™pny do zapisu dla procesu serwera.' in C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php:138
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('C:\xampp\htdocs...')
+#1 C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 C:\xampp\htdocs\integra_manager\framework\zii\widgets\grid\CGridView.php(350): CAssetManager->publish('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\integra_manager\protected\views\integraUser\list.php(104): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#10 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(56): CController->render('list', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionList()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#21 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/lis...')
+#22 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/list
+HTTP_REFERER=http://localhost/integra_manager/
+---
+2014/05/27 11:57:45 [error] [exception.CException] exception 'CException' with message 'ÅšcieÅ¼ka CAssetManager.basePath "C:\xampp\htdocs\integra_manager\assets" jest nieprawidÅ‚owa. Upewnij siÄ™, Å¼e ten katalog istnieje i jest dostÄ™pny do zapisu dla procesu serwera.' in C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php:138
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('C:\xampp\htdocs...')
+#1 C:\xampp\htdocs\integra_manager\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 C:\xampp\htdocs\integra_manager\framework\zii\widgets\grid\CGridView.php(350): CAssetManager->publish('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\integra_manager\protected\views\integraUser\list.php(104): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\integra_manager\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#10 C:\xampp\htdocs\integra_manager\protected\controllers\IntegraUserController.php(56): CController->render('list', Array)
+#11 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): IntegraUserController->actionList()
+#12 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('list')
+#21 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('integraUser/lis...')
+#22 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/integra_manager/index.php?r=integraUser/list
+HTTP_REFERER=http://localhost/integra_manager/
+---
+2014/05/27 15:25:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Próba po³¹czenia nie powiod³a siê, poniewa¿ po³¹czona strona nie odpowiedzia³a poprawnie po ustalonym okresie czasu lub utworzone po³¹czenie nie powiod³o siê, poniewa¿ po³¹czony host nie odpowiedzia³.
+' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/view&userId=33
+---
+2014/05/28 09:57:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/28 09:57:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/28 19:02:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/28 19:02:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---
+2014/05/28 21:07:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Próba po³¹czenia nie powiod³a siê, poniewa¿ po³¹czona strona nie odpowiedzia³a poprawnie po ustalonym okresie czasu lub utworzone po³¹czenie nie powiod³o siê, poniewa¿ po³¹czony host nie odpowiedzia³.
+' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/view&userId=36
+---
+2014/05/29 21:07:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Próba po³¹czenia nie powiod³a siê, poniewa¿ po³¹czona strona nie odpowiedzia³a poprawnie po ustalonym okresie czasu lub utworzone po³¹czenie nie powiod³o siê, poniewa¿ po³¹czony host nie odpowiedzia³.
+' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=integraUser/list
+---
+2014/05/30 17:47:55 [error] [php] PDOStatement::execute(): MySQL server has gone away (C:\xampp\htdocs\integra_manager\framework\db\CDbCommand.php:508)
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\schema\mysql\CMysqlSchema.php(166): CDbCommand->queryAll()
+#1 C:\xampp\htdocs\integra_manager\framework\db\schema\mysql\CMysqlSchema.php(126): CMysqlSchema->findColumns()
+#2 C:\xampp\htdocs\integra_manager\framework\db\schema\CDbSchema.php(103): CMysqlSchema->loadTable()
+#3 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(2361): CMysqlSchema->getTable()
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(658): StatusValue->getMetaData()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveFinder.php(383): StatusValue->getTableSchema()
+#7 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveFinder.php(278): CJoinElement->__construct()
+#8 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#9 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct()
+#10 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(280): Zone->getActiveFinder()
+#11 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(143): Zone->getRelated()
+#12 C:\xampp\htdocs\integra_manager\protected\models\Zone.php(126): Zone->__get()
+#13 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): Zone->getStatusClass()
+#14 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(145): Zone->__get()
+#15 C:\xampp\htdocs\integra_manager\protected\extensions\widgets\StatusBar.php(15): Zone->__get()
+#16 C:\xampp\htdocs\integra_manager\framework\web\CBaseController.php(173): StatusBar->run()
+#17 C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php(194): SiteController->widget()
+#18 C:\xampp\htdocs\integra_manager\framework\web\actions\CInlineAction.php(49): SiteController->actionReloadStatuses()
+#19 C:\xampp\htdocs\integra_manager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#21 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#23 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#24 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#25 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#27 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): SiteController->run()
+#28 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#29 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\integra_manager\index.php(13): CWebApplication->run()
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+in C:\xampp\htdocs\integra_manager\protected\models\Zone.php (126)
+in C:\xampp\htdocs\integra_manager\protected\extensions\widgets\StatusBar.php (15)
+in C:\xampp\htdocs\integra_manager\protected\controllers\SiteController.php (194)
+2014/05/30 17:48:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:48:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:49:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Nieznany host. ' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 17:54:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Próba po³¹czenia nie powiod³a siê, poniewa¿ po³¹czona strona nie odpowiedzia³a poprawnie po ustalonym okresie czasu lub utworzone po³¹czenie nie powiod³o siê, poniewa¿ po³¹czony host nie odpowiedzia³.
+' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 20:34:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Próba po³¹czenia nie powiod³a siê, poniewa¿ po³¹czona strona nie odpowiedzia³a poprawnie po ustalonym okresie czasu lub utworzone po³¹czenie nie powiod³o siê, poniewa¿ po³¹czony host nie odpowiedzia³.
+' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 20:35:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Próba po³¹czenia nie powiod³a siê, poniewa¿ po³¹czona strona nie odpowiedzia³a poprawnie po ustalonym okresie czasu lub utworzone po³¹czenie nie powiod³o siê, poniewa¿ po³¹czony host nie odpowiedzia³.
+' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 20:56:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Próba po³¹czenia nie powiod³a siê, poniewa¿ po³¹czona strona nie odpowiedzia³a poprawnie po ustalonym okresie czasu lub utworzone po³¹czenie nie powiod³o siê, poniewa¿ po³¹czony host nie odpowiedzia³.
+' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/05/30 21:07:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Próba po³¹czenia nie powiod³a siê, poniewa¿ po³¹czona strona nie odpowiedzia³a poprawnie po ustalonym okresie czasu lub utworzone po³¹czenie nie powiod³o siê, poniewa¿ po³¹czony host nie odpowiedzia³.
+' in C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\integra_manager\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\integra_manager\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\integra_manager\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(71): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\integra_manager\protected\components\WebUser.php(43): WebUser->loadUser('1')
+#9 C:\xampp\htdocs\integra_manager\framework\base\CComponent.php(111): WebUser->getIsUser()
+#10 C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php(146): CComponent->__get('isUser')
+#11 C:\xampp\htdocs\integra_manager\protected\components\Controller.php(30): CWebUser->__get('isUser')
+#12 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(281): Controller->init()
+#13 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#14 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://localhost/integra_manager/index.php?r=site/desktop
+---
+2014/06/10 09:01:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Wymagane logowanie' in C:\xampp\htdocs\integra_manager\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\integra_manager\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Nie jeste?? upo...')
+#2 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\integra_manager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\integra_manager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\integra_manager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\integra_manager\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\integra_manager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(282): CController->run('reloadStatuses')
+#9 C:\xampp\htdocs\integra_manager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/reloadStat...')
+#10 C:\xampp\htdocs\integra_manager\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\integra_manager\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/integra_manager/index.php?r=site/reloadStatuses
+HTTP_REFERER=http://192.168.20.8/integra_manager/index.php?r=site/index
+---

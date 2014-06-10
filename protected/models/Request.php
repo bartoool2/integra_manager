@@ -20,6 +20,7 @@ class Request extends CActiveRecord
 	const CODE_READ_USERS_LIST = 4;
 	const CODE_CREATE_USER = 5;
 	const CODE_UPDATE_USER = 6;
+	const CODE_UPDATE_EVENTS = 7;
 	
 	const STATUS_UNDONE = 0;
 	const STATUS_DONE = 1;

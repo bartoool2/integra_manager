@@ -125,6 +125,8 @@ class Event extends CActiveRecord
 			$criteria->addCondition('date <= "'.$this->alias_date_to.'" ');
 		}
 		
+		$criteria->order = 'date DESC, time DESC';
+		
 //		print_r($criteria);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
